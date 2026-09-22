@@ -1,0 +1,1688 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Vishesh Jangir — Studio Wall</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Caveat:wght@400;600;700&amp;family=Space+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "inverse-surface": "#e5e2e1",
+          "paper-manila": "#F3EFE6",
+          "outline": "#ad8884",
+          "note-blueprint": "#A9C9E8",
+          "on-error": "#690005",
+          "tertiary": "#d9c853",
+          "tertiary-container": "#bcad3a",
+          "pencil-lead": "#606060",
+          "primary-fixed-dim": "#ffb4ab",
+          "on-tertiary-fixed": "#201c00",
+          "on-tertiary-fixed-variant": "#504700",
+          "inverse-on-surface": "#313030",
+          "on-secondary-fixed-variant": "#93000d",
+          "on-surface": "#e5e2e1",
+          "paper-kraft": "#E8DCC3",
+          "error": "#ffb4ab",
+          "surface-container-low": "#1c1b1b",
+          "primary-container": "#d71920",
+          "background": "#131313",
+          "error-container": "#93000a",
+          "wall-graphite": "#242424",
+          "outline-variant": "#5d3f3c",
+          "secondary-fixed": "#ffdad6",
+          "on-secondary-container": "#ffb3ab",
+          "on-background": "#e5e2e1",
+          "surface-dim": "#131313",
+          "surface-container-highest": "#353534",
+          "on-tertiary-container": "#484000",
+          "surface-tint": "#ffb4ab",
+          "on-surface-variant": "#e6bdb8",
+          "on-primary-fixed": "#410002",
+          "primary": "#ffb4ab",
+          "tertiary-fixed": "#f5e46b",
+          "on-primary-container": "#ffece9",
+          "wall-slate": "#8A8985",
+          "surface": "#131313",
+          "on-primary-fixed-variant": "#93000d",
+          "on-tertiary": "#373100",
+          "pin-blue": "#2255A4",
+          "ink-black": "#121212",
+          "surface-container-high": "#2a2a2a",
+          "inverse-primary": "#c00014",
+          "secondary-fixed-dim": "#ffb4ac",
+          "surface-container": "#201f1f",
+          "wall-midgray": "#4A4946",
+          "on-secondary-fixed": "#410002",
+          "on-error-container": "#ffdad6",
+          "primary-fixed": "#ffdad6",
+          "surface-variant": "#353534",
+          "secondary": "#ffb4ac",
+          "paper-crisp": "#FAF8F2",
+          "surface-bright": "#393939",
+          "on-primary": "#690006",
+          "on-secondary": "#690006",
+          "secondary-container": "#a90212",
+          "surface-container-lowest": "#0e0e0e",
+          "tertiary-fixed-dim": "#d8c852",
+          "wall-concrete": "#2E2E2C"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1.25rem",
+          "space-md": "1rem",
+          "space-lg": "1.75rem",
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-xl": "3rem",
+          "margin": "3rem",
+          "gutter": "1.5rem"
+        },
+        "fontFamily": {
+          "label-code": ["Space Grotesk"],
+          "body-md": ["Space Grotesk"],
+          "headline-hero-mobile": ["Bebas Neue"],
+          "annotation-lg": ["Caveat"],
+          "headline-xl-mobile": ["Bebas Neue"],
+          "annotation-md": ["Caveat"],
+          "body-lg": ["Space Grotesk"],
+          "headline-lg": ["Bebas Neue"],
+          "headline-md": ["Space Grotesk"],
+          "body-sm": ["Space Grotesk"],
+          "headline-hero": ["Bebas Neue"],
+          "headline-xl": ["Bebas Neue"],
+          "mono": ["JetBrains Mono", "Space Grotesk", "monospace"]
+        },
+        "fontSize": {
+          "label-code": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+          "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-hero-mobile": ["56px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+          "annotation-lg": ["26px", { "lineHeight": "28px", "fontWeight": "600" }],
+          "headline-xl-mobile": ["38px", { "lineHeight": "38px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+          "annotation-md": ["20px", { "lineHeight": "22px", "fontWeight": "500" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+          "headline-lg": ["36px", { "lineHeight": "36px", "letterSpacing": "0.04em", "fontWeight": "400" }],
+          "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "headline-hero": ["112px", { "lineHeight": "96px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+          "headline-xl": ["64px", { "lineHeight": "60px", "letterSpacing": "0.03em", "fontWeight": "400" }]
+        }
+      },
+    },
+  }
+</script>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      ::-webkit-scrollbar { display: none; }
+    }
+    html { scroll-behavior: smooth; }
+    .studio-wall-grid {
+      background-color: #131313;
+      background-image: 
+        radial-gradient(circle at 50% 120px, rgba(74,73,70,0.28) 0%, rgba(19,19,19,0.98) 70%),
+        linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+    .pin-3d-red {
+      width: 16px;
+      height: 16px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 35% 30%, #ff8a80 0%, #d71920 45%, #7a0006 100%);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.65), 0 1px 2px rgba(0,0,0,0.9), inset 1px 1px 1px rgba(255,255,255,0.8);
+      position: relative;
+    }
+    .pin-3d-blue {
+      width: 16px;
+      height: 16px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 35% 30%, #7da2ea 0%, #2255A4 50%, #0d2854 100%);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.65), 0 1px 2px rgba(0,0,0,0.9), inset 1px 1px 1px rgba(255,255,255,0.8);
+      position: relative;
+    }
+    .paper-shadow {
+      box-shadow: 0 8px 20px -3px rgba(0,0,0,0.55), 0 3px 6px rgba(0,0,0,0.35);
+    }
+    .paper-shadow-lifted {
+      box-shadow: 0 24px 45px -8px rgba(0,0,0,0.85), 0 12px 20px rgba(0,0,0,0.55);
+    }
+    .tactile-grab { cursor: grab; }
+    .tactile-grab:active { cursor: grabbing; }
+    
+    /* Authentic Cyanotype Blueprint Grid Styling */
+    .authentic-blueprint-board {
+      background-color: #071524;
+      background-image: 
+        linear-gradient(to right, rgba(30, 73, 118, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 73, 118, 0.3) 1px, transparent 1px),
+        linear-gradient(to right, rgba(20, 51, 82, 0.6) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20, 51, 82, 0.6) 1px, transparent 1px);
+      background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+    }
+    .blueprint-border-corners {
+      position: relative;
+    }
+    .blueprint-border-corners::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px dashed rgba(169, 201, 232, 0.25);
+      pointer-events: none;
+    }
+    .tech-bp-node {
+      position: relative;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tech-bp-node.node-selected {
+      background-color: #d71920 !important;
+      color: #ffffff !important;
+      border-color: #ffb4ab !important;
+      box-shadow: 0 0 0 2px #d71920, 0 0 16px rgba(215, 25, 32, 0.8);
+      transform: translateY(-1px) scale(1.02);
+      z-index: 20;
+    }
+    .tech-bp-node.node-dimmed {
+      opacity: 0.35;
+      border-color: rgba(20, 51, 82, 0.5);
+    }
+    #tactile-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s ease-out, opacity 0.2s ease;
+      display: none;
+    }
+    @media (pointer: fine) {
+      body.has-custom-cursor, body.has-custom-cursor * {
+        cursor: none !important;
+      }
+      #tactile-cursor {
+        display: flex;
+      }
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md studio-wall-grid min-h-screen relative selection:bg-primary-container selection:text-on-primary-container has-custom-cursor">
+<!-- TACTILE CONTEXTUAL CURSOR -->
+<div class="items-center justify-center" id="tactile-cursor">
+<div class="w-3.5 h-3.5 rounded-full bg-primary-container border-2 border-paper-crisp shadow-md transition-all duration-150" id="cursor-dot"></div>
+<span class="ml-1.5 px-1.5 py-0.5 bg-ink-black text-paper-crisp font-label-code text-[9px] tracking-wider border border-surface-container-highest shadow uppercase hidden" id="cursor-badge">DRAG</span>
+</div>
+<!-- NAVIGATION HEADER -->
+<header class="fixed top-0 w-full z-40">
+<div class="h-14 w-full px-4 md:px-gutter flex items-center justify-between relative bg-surface/90 backdrop-blur-md border-b border-surface-container-high/40">
+<div class="flex items-center gap-space-md">
+<div class="relative bg-paper-manila text-ink-black px-3 py-1 shadow-md -rotate-1 rounded-none transform transition-transform hover:rotate-0">
+<div class="absolute -top-2 left-1/2 -translate-x-1/2 pin-3d-red !w-2.5 !h-2.5"></div>
+<span class="font-headline-md text-headline-md tracking-wider uppercase block text-sm md:text-lg">VISHESH JANGIR</span>
+<span class="font-annotation-md text-[11px] text-wall-midgray block -mt-1 leading-none">atelier notes • student &amp; builder</span>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low border border-surface-container-highest">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-label-code text-[10px] text-wall-slate uppercase">STUDIO WORKBENCH • LEARNING &amp; BUILDING</span>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-3">
+<div class="relative bg-paper-crisp text-ink-black px-2.5 py-1 shadow-md rotate-1 rounded-none transform transition-transform hover:rotate-0">
+<div class="absolute -top-2 left-1/2 -translate-x-1/2 pin-3d-blue !w-2.5 !h-2.5"></div>
+<nav class="flex items-center gap-1">
+<a class="px-2 py-0.5 font-label-code text-[10px] md:text-label-code uppercase tracking-wider bg-ink-black text-paper-crisp font-bold" data-cursor="POINTER" href="#">Wall</a>
+<a class="px-2 py-0.5 font-label-code text-[10px] md:text-label-code uppercase tracking-wider text-ink-black hover:bg-surface-variant hover:text-on-surface" data-cursor="POINTER" href="#project-wall">Projects</a>
+<a class="px-2 py-0.5 font-label-code text-[10px] md:text-label-code uppercase tracking-wider text-ink-black hover:bg-surface-variant hover:text-on-surface" data-cursor="POINTER" href="#studio-archive">Technical Map</a>
+<a class="px-2 py-0.5 font-label-code text-[10px] md:text-label-code uppercase tracking-wider text-ink-black hover:bg-surface-variant hover:text-on-surface" data-cursor="POINTER" href="#contact-note">Contact</a>
+</nav>
+</div>
+<a class="w-8 h-8 min-h-[32px] min-w-[32px] bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface transition-colors shadow" data-cursor="POINTER" href="https://github.com/VisheshJangir645" rel="noopener noreferrer" target="_blank" title="GITHUB PROFILE ↗">
+<span class="material-symbols-outlined text-[17px]">code</span>
+</a>
+</div>
+</div>
+</header>
+<main class="relative z-10 w-full pt-14 px-3 md:px-gutter pb-8">
+<div class="flex flex-col w-full max-w-6xl mx-auto space-y-8 md:space-y-10">
+<!-- =========================================================================
+       HERO WORKBENCH CANVAS (#hero-wall)
+       ========================================================================= -->
+<section class="relative w-full pt-6 pb-2 flex flex-col items-center justify-center overflow-visible" id="hero-wall">
+<!-- Red Connective SVG Threads -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" id="thread-canvas">
+<path d="M 640 88 Q 458.19 315.05 276.39 462.09" fill="none" id="thread-ai" opacity="0.85" stroke="#d71920" stroke-dasharray="3,3" stroke-width="2"></path>
+<path d="M 640 88 Q 821.20 317.02 1002.41 466.04" fill="none" id="thread-fe" opacity="0.85" stroke="#d71920" stroke-dasharray="3,3" stroke-width="2"></path>
+<path d="M 640 88 Q 489.81 396.03 339.61 624.05" fill="none" id="thread-bridge" opacity="0.85" stroke="#d71920" stroke-dasharray="3,3" stroke-width="2"></path>
+<path d="M 640 88 Q 790.80 396.00 941.59 624.00" fill="none" id="thread-dsa" opacity="0.85" stroke="#d71920" stroke-dasharray="3,3" stroke-width="2"></path>
+</svg>
+<div class="relative z-20 flex flex-col items-center text-center max-w-3xl px-3">
+<div class="pin-3d-red mb-1.5" id="center-hub-pin" title="Central Atelier Hub"></div>
+<p class="font-annotation-lg text-lg md:text-xl text-secondary tracking-wide max-w-xl text-center">
+  Computer Science student building software, AI systems, and interactive experiences.
+</p>
+<h1 class="font-headline-hero text-6xl md:text-8xl text-paper-crisp uppercase tracking-wider select-none mt-0.5 leading-none">
+  VISHESH JANGIR
+</h1>
+<div class="mt-2 px-3 py-0.5 bg-surface-container-high text-paper-kraft font-label-code text-[10px] md:text-[11px] uppercase tracking-widest shadow-sm">
+  ELECTRON • REACT • NODE.JS/EXPRESS • PYTHON • OLLAMA • GEMINI
+</div>
+<div class="mt-3.5 flex flex-wrap items-center justify-center gap-2.5">
+<a class="px-4 py-2 bg-primary-container text-on-primary font-headline-md text-xs uppercase tracking-wider shadow hover:opacity-95 transition-opacity min-h-[44px] flex items-center" data-cursor="POINTER" href="#project-wall">
+  INSPECT PROJECTS ↓
+</a>
+<a class="px-4 py-2 bg-paper-crisp text-ink-black font-headline-md text-xs uppercase tracking-wider shadow hover:bg-paper-manila transition-colors min-h-[44px] flex items-center" data-cursor="POINTER" href="#contact-note">
+  DISPATCH NOTE ✉
+</a>
+</div>
+</div>
+<!-- 4 Draggable Tactile Substrate Notes -->
+<div class="relative w-full max-w-5xl h-[330px] md:h-[300px] mt-4 select-none">
+<!-- Note 1: Manila -->
+<div class="tactile-grab absolute top-1 left-1 md:left-6 w-56 md:w-64 p-3.5 bg-paper-manila text-ink-black shadow-xl -rotate-3 z-30" data-cursor="DRAG" id="note-ai" aria-label="Tactile note: AI and LLM Backend specification" tabindex="0">
+<div class="note-pin absolute -top-2.5 left-1/2 -translate-x-1/2 pin-3d-red !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">SPEC 01 // DUAL INFERENCE</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-lg text-xl uppercase mt-1 leading-none">AI &amp; LLM BACKEND</h3>
+<p class="font-body-sm text-[11px] text-ink-black/85 mt-1 leading-snug">
+  Local Ollama models &amp; cloud Gemini API integration. Dual inference with dynamic switching and real-time generation.
+</p>
+</div>
+<!-- Note 2: Blueprint Blue -->
+<div class="tactile-grab absolute top-2 right-1 md:right-6 w-56 md:w-64 p-3.5 bg-note-blueprint text-ink-black shadow-xl rotate-2 z-30" data-cursor="DRAG" id="note-fe" aria-label="Tactile note: Frontend and Desktop interfaces specification" tabindex="0">
+<div class="note-pin absolute -top-2.5 left-1/2 -translate-x-1/2 pin-3d-blue !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">SPEC 02 // INTERFACES</span>
+<span class="w-1.5 h-1.5 rounded-full bg-pin-blue"></span>
+</div>
+<h3 class="font-headline-lg text-xl uppercase mt-1 leading-none">FRONTEND &amp; DESKTOP</h3>
+<p class="font-body-sm text-[11px] text-ink-black/85 mt-1 leading-snug">
+  TypeScript, React, Vite, and Electron. Companion VS Code extension with side-by-side non-modal Diff Preview.
+</p>
+</div>
+<!-- Note 3: Kraft Paper -->
+<div class="tactile-grab absolute bottom-1 left-4 md:left-20 w-56 md:w-64 p-3.5 bg-paper-kraft text-ink-black shadow-xl rotate-3 z-30" data-cursor="DRAG" id="note-bridge" aria-label="Tactile note: Streaming Bridge runtime specification" tabindex="0">
+<div class="note-pin absolute -top-2.5 left-1/2 -translate-x-1/2 pin-3d-red !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">SPEC 03 // RUNTIME</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+</div>
+<h3 class="font-headline-lg text-xl uppercase mt-1 leading-none">STREAMING BRIDGE</h3>
+<p class="font-body-sm text-[11px] text-ink-black/85 mt-1 leading-snug">
+  Node.js/Express local server. Real-time Server-Sent Events (SSE), escape-to-cancel, and clean stream cleanup across chats.
+</p>
+</div>
+<!-- Note 4: Crisp White Paper -->
+<div class="tactile-grab absolute bottom-1 right-4 md:right-20 w-56 md:w-64 p-3.5 bg-paper-crisp text-ink-black shadow-xl -rotate-2 z-30" data-cursor="DRAG" id="note-dsa" aria-label="Tactile note: Problem solving and core data structures theory" tabindex="0">
+<div class="note-pin absolute -top-2.5 left-1/2 -translate-x-1/2 pin-3d-blue !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">SPEC 04 // CORE THEORY</span>
+<span class="w-1.5 h-1.5 rounded-full bg-ink-black"></span>
+</div>
+<h3 class="font-headline-lg text-xl uppercase mt-1 leading-none">PROBLEM SOLVING</h3>
+<p class="font-body-sm text-[11px] text-ink-black/85 mt-1 leading-snug">
+  C++ Data Structures &amp; Algorithms. Biweekly LeetCode competitive contests, 50+ day streak badge, and systematic decomposition.
+</p>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       COMPACT ABOUT ME (IDENTITY DOSSIER) (#about)
+       ========================================================================= -->
+<section class="relative w-full flex flex-col items-center py-2" id="about" style="scroll-margin-top: 5rem;">
+<div class="relative w-full max-w-2xl min-h-[220px] [perspective:1000px]">
+<div class="relative w-full duration-500 [transform-style:preserve-3d] transition-transform" id="about-flipper">
+<!-- FRONT SIDE: Compact Student Dossier -->
+<div class="relative w-full p-4 md:p-5 bg-paper-crisp text-ink-black shadow-xl [backface-visibility:hidden] border-l-4 border-primary-container">
+<div class="absolute -top-2.5 left-6 pin-3d-red !w-3 !h-3"></div>
+<div class="flex items-start justify-between gap-3 pb-2.5 border-b border-ink-black/10">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-[9px] text-primary-container uppercase font-bold tracking-widest">STUDENT DOSSIER</span>
+<span class="font-label-code text-[9px] text-wall-midgray">• B.TECH CSE @ LPU</span>
+</div>
+<h3 class="font-headline-lg text-xl uppercase mt-0.5">VISHESH JANGIR</h3>
+<p class="font-body-sm text-[11px] text-pencil-lead">Lovely Professional University • Aug 2024 – Present</p>
+</div>
+<div class="px-2.5 py-1 bg-paper-manila shadow-inner text-right shrink-0">
+<span class="font-label-code text-[8px] text-wall-midgray uppercase block leading-none">CGPA</span>
+<span class="font-headline-md text-sm md:text-base text-primary-container font-bold">8.77 / 10.0</span>
+</div>
+</div>
+<div class="mt-2.5 flex flex-col md:flex-row gap-3 items-start justify-between">
+<p class="font-body-sm text-xs text-ink-black/90 leading-relaxed max-w-md">
+  Computer Science student at Lovely Professional University building software, AI systems, and interactive experiences. Grounding applications in clean algorithms, clear code, and local-first architecture.
+</p>
+<div class="flex flex-col gap-1 text-[11px] shrink-0 w-full md:w-auto font-label-code">
+<span class="text-[9px] uppercase tracking-wider text-wall-midgray font-bold">Core Interests:</span>
+<div class="flex flex-wrap md:flex-col gap-1">
+<span class="bg-paper-manila px-1.5 py-0.5">Software Engineering</span>
+<span class="bg-paper-manila px-1.5 py-0.5">AI / ML &amp; LLMs</span>
+<span class="bg-paper-manila px-1.5 py-0.5">Full-Stack Development</span>
+<span class="bg-paper-manila px-1.5 py-0.5">Interactive Interfaces</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-ink-black/10 flex items-center justify-between">
+<span class="font-annotation-md text-xs text-pencil-lead">“Applied thought anchored to constraint”</span>
+<button class="px-2.5 py-1 bg-ink-black text-paper-crisp font-label-code text-[9px] uppercase tracking-wider hover:bg-surface-container-highest transition-colors flex items-center gap-1 min-h-[36px]" data-cursor="POINTER" onclick="toggleAboutFlip()">
+<span class="">WHAT I LIKE BUILDING ↻</span>
+</button>
+</div>
+</div>
+<!-- BACK SIDE: What I Like Building -->
+<div class="absolute inset-0 w-full h-full p-4 md:p-5 bg-paper-kraft text-ink-black shadow-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-between border-l-4 border-pin-blue">
+<div class="absolute -top-2.5 left-6 pin-3d-blue !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1.5 border-b border-ink-black/10">
+<div>
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">NOTE // INTENT</span>
+<h3 class="font-headline-lg text-lg uppercase mt-0.5">WHAT I LIKE BUILDING</h3>
+</div>
+<button class="px-2 py-0.5 bg-ink-black text-paper-crisp font-label-code text-[9px] uppercase hover:bg-surface-container-highest transition-colors min-h-[32px] flex items-center" data-cursor="POINTER" onclick="toggleAboutFlip()">
+  RETURN ↺
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 my-1">
+<div class="p-2 bg-paper-manila shadow-sm">
+<span class="font-label-code text-[8px] text-primary-container uppercase font-bold">01 / AI TOOLS</span>
+<h4 class="font-headline-md text-[11px] uppercase mt-0.5">Local &amp; Cloud LLMs</h4>
+<p class="font-body-sm text-[10px] text-ink-black/80 mt-0.5 leading-tight">Fast token streaming, dual backend switching, and local-first developer utilities.</p>
+</div>
+<div class="p-2 bg-paper-manila shadow-sm">
+<span class="font-label-code text-[8px] text-pin-blue uppercase font-bold">02 / WORKFLOW UTILITIES</span>
+<h4 class="font-headline-md text-[11px] uppercase mt-0.5">Editor Utilities</h4>
+<p class="font-body-sm text-[10px] text-ink-black/80 mt-0.5 leading-tight">VS Code companions with Diff Preview and lightweight local streaming bridges.</p>
+</div>
+<div class="p-2 bg-paper-manila shadow-sm">
+<span class="font-label-code text-[8px] text-wall-midgray uppercase font-bold">03 / VISUAL SYSTEMS</span>
+<h4 class="font-headline-md text-[11px] uppercase mt-0.5">Timeline Visualization</h4>
+<p class="font-body-sm text-[10px] text-ink-black/80 mt-0.5 leading-tight">Machine-learning clustering, confidence scores, and historical narrative visualizers.</p>
+</div>
+</div>
+<div class="pt-1.5 border-t border-ink-black/10 flex items-center justify-between font-label-code text-[9px] text-pencil-lead">
+<span class="">Lovely Professional University • Punjab</span>
+<span class="">NOTE #02</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       THE PROJECT WALL (#project-wall) — DOMINANT CENTERPIECE
+       ========================================================================= -->
+<section class="relative w-full pt-4 pb-4 flex flex-col items-center" id="project-wall" style="scroll-margin-top: 5rem;"><div class="flex flex-col items-center text-center max-w-2xl px-3 mb-6"><div class="pin-3d-red mb-1.5"></div><h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-paper-crisp">THE PROJECT WALL</h2><p class="font-annotation-lg text-sm md:text-base text-secondary mt-0.5">Pinned project dossiers &amp; interactive system schematics</p><div class="mt-4 flex flex-wrap items-center justify-center gap-1.5 p-1 bg-surface-container-low shadow-inner"><button class="project-filter-btn px-2.5 py-1 bg-ink-black text-paper-crisp font-label-code text-[10px] md:text-label-code uppercase transition-colors min-h-[36px]" data-cursor="POINTER" id="filter-all" onclick="filterProjects('all')">ALL WORKS [3]</button><button class="project-filter-btn px-2.5 py-1 bg-surface-container-high text-on-surface font-label-code text-[10px] md:text-label-code uppercase hover:bg-surface-container-highest transition-colors min-h-[36px]" data-cursor="POINTER" id="filter-ai" onclick="filterProjects('ai')">AI / DEVELOPER TOOLS</button><button class="project-filter-btn px-2.5 py-1 bg-surface-container-high text-on-surface font-label-code text-[10px] md:text-label-code uppercase hover:bg-surface-container-highest transition-colors min-h-[36px]" data-cursor="POINTER" id="filter-security" onclick="filterProjects('security')">SECURITY</button><button class="project-filter-btn px-2.5 py-1 bg-surface-container-high text-on-surface font-label-code text-[10px] md:text-label-code uppercase hover:bg-surface-container-highest transition-colors min-h-[36px]" data-cursor="POINTER" id="filter-fs" onclick="filterProjects('fs')">FULL-STACK / ML</button></div></div><div class="w-full max-w-6xl px-2 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"><article class="project-dossier-card relative flex flex-col justify-between p-5 bg-paper-crisp text-ink-black shadow-xl -rotate-[1.5deg] hover:rotate-0 transition-transform cursor-pointer border-t-4 border-primary-container" data-category="ai" id="card-assistant" onclick="openProjectDossier('assistant')" role="button" aria-label="Open project dossier for Local-First AI Coding Assistant"><div class="absolute -top-2.5 left-6 pin-3d-red !w-3 !h-3"></div><div class="absolute -top-2.5 right-6 pin-3d-blue !w-3 !h-3"></div><div><div class="flex items-center justify-between pb-1.5 border-b border-ink-black/15"><span class="px-1.5 py-0.2 bg-primary-container text-on-primary font-label-code text-[9px] uppercase font-bold">DOSSIER #01</span><span class="font-label-code text-[9px] text-wall-midgray uppercase">AI / DEV TOOLS</span></div><h3 class="font-headline-lg text-xl uppercase mt-2 leading-tight">LOCAL-FIRST AI CODING ASSISTANT</h3><p class="font-annotation-md text-xs text-primary-container mt-0.5 leading-snug">Desktop client, VS Code extension, and local HTTP streaming bridge.</p><p class="font-body-sm text-xs text-ink-black/85 mt-2 leading-relaxed">Dual inference across local Ollama models and cloud Gemini API coordinated by a local Node.js/Express HTTP streaming server with side-by-side Diff Preview.</p></div><div class="mt-4 pt-3 border-t border-ink-black/10"><div class="flex flex-wrap gap-1 mb-3"><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">TypeScript</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">React</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">Electron</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">Node/Express</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">Ollama</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">Gemini</span></div><button class="w-full py-2 bg-ink-black text-paper-crisp font-headline-md text-xs uppercase tracking-wider shadow hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-1.5 min-h-[38px]" data-cursor="POINTER" onclick="event.stopPropagation(); openProjectDossier('assistant')"><span class="">OPEN DOSSIER</span><span class="material-symbols-outlined text-[13px]">north_east</span></button></div></article><article class="project-dossier-card relative flex flex-col justify-between p-5 bg-paper-manila text-ink-black shadow-xl rotate-[1.8deg] hover:rotate-0 transition-transform cursor-pointer border-t-4 border-pin-blue" data-category="fs" id="card-chronomind" onclick="openProjectDossier('chronomind')" role="button" aria-label="Open project dossier for Chronomind interactive timeline visualizer"><div class="absolute -top-2.5 left-6 pin-3d-blue !w-3 !h-3"></div><div class="absolute -top-2.5 right-6 pin-3d-red !w-3 !h-3"></div><div><div class="flex items-center justify-between pb-1.5 border-b border-ink-black/15"><span class="px-1.5 py-0.2 bg-ink-black text-paper-crisp font-label-code text-[9px] uppercase font-bold">DOSSIER #02</span><span class="font-label-code text-[9px] text-wall-midgray uppercase">FULL-STACK / ML</span></div><h3 class="font-headline-lg text-xl uppercase mt-2 leading-tight">CHRONOMIND</h3><p class="font-annotation-md text-xs text-pin-blue mt-0.5 leading-snug">Interactive timeline visualization for historical event datasets.</p><p class="font-body-sm text-xs text-ink-black/85 mt-2 leading-relaxed">Full-stack research platform integrating a React + Vite frontend with a Python backend utilizing machine learning data clustering and confidence reliability metrics.</p></div><div class="mt-4 pt-3 border-t border-ink-black/10"><div class="flex flex-wrap gap-1 mb-3"><span class="px-1.5 py-0.5 bg-paper-crisp font-label-code text-[9px] uppercase">React</span><span class="px-1.5 py-0.5 bg-paper-crisp font-label-code text-[9px] uppercase">Vite</span><span class="px-1.5 py-0.5 bg-paper-crisp font-label-code text-[9px] uppercase">Python</span><span class="px-1.5 py-0.5 bg-paper-crisp font-label-code text-[9px] uppercase">Machine Learning</span><span class="px-1.5 py-0.5 bg-paper-crisp font-label-code text-[9px] uppercase">Clustering</span></div><button class="w-full py-2 bg-ink-black text-paper-crisp font-headline-md text-xs uppercase tracking-wider shadow hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-1.5 min-h-[38px]" data-cursor="POINTER" onclick="event.stopPropagation(); openProjectDossier('chronomind')"><span class="">OPEN DOSSIER</span><span class="material-symbols-outlined text-[13px]">north_east</span></button></div></article><article class="project-dossier-card relative flex flex-col justify-between p-5 bg-paper-kraft text-ink-black shadow-xl -rotate-[1deg] hover:rotate-0 transition-transform cursor-pointer border-t-4 border-ink-black" data-category="security" id="card-aegis" onclick="openProjectDossier('aegis')" role="button" aria-label="Open project dossier for Aegis cryptographic authentication hub"><div class="absolute -top-2.5 left-6 pin-3d-red !w-3 !h-3"></div><div class="absolute -top-2.5 right-6 pin-3d-red !w-3 !h-3"></div><div><div class="flex items-center justify-between pb-1.5 border-b border-ink-black/15"><span class="px-1.5 py-0.2 bg-ink-black text-paper-crisp font-label-code text-[9px] uppercase font-bold">DOSSIER #03</span><span class="font-label-code text-[9px] text-wall-midgray uppercase">SECURITY &amp; AUTH</span></div><h3 class="font-headline-lg text-xl uppercase mt-2 leading-tight">AEGIS</h3><p class="font-annotation-md text-xs text-primary-container mt-0.5 leading-snug">Cryptographic Authentication &amp; Live Threat Mitigation Hub.</p><p class="font-body-sm text-xs text-ink-black/85 mt-2 leading-relaxed">Security backend built on FastAPI and Python featuring Argon2id password hashing, time-based one-time password (TOTP) MFA, and WebSocket live anomaly broadcast.</p></div><div class="mt-4 pt-3 border-t border-ink-black/10"><div class="flex flex-wrap gap-1 mb-3"><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">FastAPI</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">Python</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">Argon2id</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">TOTP MFA</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">WebSockets</span><span class="px-1.5 py-0.5 bg-paper-manila font-label-code text-[9px] uppercase">JWT</span></div><button class="w-full py-2 bg-ink-black text-paper-crisp font-headline-md text-xs uppercase tracking-wider shadow hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-1.5 min-h-[38px]" data-cursor="POINTER" onclick="event.stopPropagation(); openProjectDossier('aegis')"><span class="">OPEN DOSSIER</span><span class="material-symbols-outlined text-[13px]">north_east</span></button></div></article></div><div class="mt-8 text-center"><a class="font-label-code text-xs text-wall-slate hover:text-paper-crisp transition-colors underline flex items-center justify-center gap-1 min-h-[32px]" data-cursor="POINTER" href="https://github.com/VisheshJangir645" rel="noopener noreferrer" target="_blank"><span class="">More repositories &amp; research on GitHub</span><span class="material-symbols-outlined text-[14px]">north_east</span></a></div></section>
+<!-- =========================================================================
+       STUDIO WORKBENCH: TECHNICAL MAP (AUTHENTIC 70/30 BLUEPRINT DRAFTING WORKBENCH)
+       ========================================================================= -->
+<section class="relative w-full pt-2 pb-6 flex flex-col items-center" id="studio-archive" style="scroll-margin-top: 5rem;"><div class="w-full max-w-6xl px-2 md:px-4">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-4 px-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-note-blueprint animate-pulse"></span>
+<div>
+<span class="font-label-code text-[11px] uppercase tracking-widest text-paper-crisp">STUDIO WORKBENCH // SKILL INVENTORY</span>
+<h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-paper-crisp mt-0.5 leading-none">TECHNICAL MAP</h2>
+</div>
+</div>
+<div class="text-left sm:text-right">
+<p class="font-annotation-lg text-base md:text-lg text-tertiary">Languages, frameworks, systems &amp; tools I work with to build software, AI systems, and interfaces.</p>
+<span class="font-label-code text-[9px] text-wall-slate uppercase">DOC // SPEC-TECH-01 — CURRENT TOOLSET</span>
+</div>
+</div>
+<!-- FULL-WIDTH CYANOTYPE BLUEPRINT DRAFTING SHEET -->
+<div class="w-full authentic-blueprint-board blueprint-border-corners p-5 sm:p-7 md:p-8 shadow-2xl border-2 border-cyan-800/80 relative text-slate-200 -rotate-[0.3deg] hover:rotate-0 transition-transform" id="blueprint-canvas-container">
+<!-- Physical push pins in all 4 corners -->
+<div class="absolute -top-2.5 -left-2 pin-3d-red !w-3.5 !h-3.5 z-30 shadow-lg" title="Drafting Pin (NW)"></div>
+<div class="absolute -top-2.5 -right-2 pin-3d-blue !w-3.5 !h-3.5 z-30 shadow-lg" title="Drafting Pin (NE)"></div>
+<div class="absolute -bottom-2.5 -left-2 pin-3d-blue !w-3.5 !h-3.5 z-30 shadow-lg" title="Drafting Pin (SW)"></div>
+<div class="absolute -bottom-2.5 -right-2 pin-3d-red !w-3.5 !h-3.5 z-30 shadow-lg" title="Drafting Pin (SE)"></div>
+<!-- Blueprint Top Header Bar -->
+<div class="flex flex-wrap items-center justify-between pb-3 mb-6 border-b border-cyan-800/60 relative z-20 gap-2">
+<div class="flex items-center gap-2">
+<span class="font-mono text-sm text-cyan-400">⊕</span>
+<span class="font-mono text-xs md:text-sm text-paper-crisp uppercase tracking-wider font-bold">SYSTEM ARCHITECTURE &amp; CAPABILITY MATRIX</span>
+<span class="px-2 py-0.5 bg-[#081f33] border border-cyan-700/60 text-cyan-300 font-mono text-[10px] uppercase hidden sm:inline">28 VERIFIED PRODUCTION TECHNOLOGIES</span>
+</div>
+<div class="flex items-center gap-3 font-mono text-[10px] text-cyan-400/80">
+<span class="hidden md:inline">GRID REF: 31.2536° N, 75.7037° E</span>
+<span class="px-1.5 py-0.5 bg-cyan-950/80 border border-cyan-800 text-cyan-200 uppercase">STATUS: DEPLOYED</span>
+</div>
+</div>
+<!-- NON-INTRUSIVE INLINE TRACE BANNER -->
+<div class="mb-6 p-3 bg-[#06182a]/90 border border-cyan-600/50 shadow-inner flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 relative z-20 transition-all duration-200" id="tech-trace-banner">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shrink-0"></span>
+<div class="font-mono text-xs text-cyan-100" id="tech-trace-text">
+<span class="text-cyan-400 font-bold uppercase">INTERACTIVE SPEC TRACE:</span> Click any technology badge below to highlight verified project implementations.
+        </div>
+</div>
+<div class="flex items-center gap-2 shrink-0" id="tech-trace-actions">
+<span class="font-mono text-[10px] text-cyan-400/70 uppercase">ALL 28 SKILLS SHOWN BELOW</span>
+</div>
+</div>
+<!-- 6-CATEGORY 3-COLUMN (MD:2, LG:3) DISCIPLINED DRAFTING MATRIX -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative z-20">
+<!-- 01 / LANGUAGES -->
+<div class="p-3.5 bg-[#081f33]/70 border border-cyan-900/60 flex flex-col justify-between hover:border-cyan-700/80 transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-cyan-900/50">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-mono text-xs text-white uppercase font-bold tracking-wider">01 / LANGUAGES</span>
+</div>
+<span class="font-mono text-[9px] text-cyan-400/70 uppercase">CORE SYNTAX</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('cpp')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">C++</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('python')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">PYTHON</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('javascript')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">JAVASCRIPT</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('typescript')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">TYPESCRIPT</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('sql')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">SQL</span>
+</button>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-cyan-950 font-mono text-[9px] text-cyan-500/70 flex justify-between">
+<span class="">DATA RIGOR</span><span class="">5 RIGOROUS BASES</span>
+</div>
+</div>
+<!-- 02 / FRONTEND -->
+<div class="p-3.5 bg-[#081f33]/70 border border-cyan-900/60 flex flex-col justify-between hover:border-cyan-700/80 transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-cyan-900/50">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-mono text-xs text-white uppercase font-bold tracking-wider">02 / FRONTEND</span>
+</div>
+<span class="font-mono text-[9px] text-cyan-400/70 uppercase">CLIENT INTERFACES</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('html')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">HTML</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('css')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">CSS</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('react')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">REACT</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('vite')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">VITE</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('tailwind')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">TAILWIND CSS</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('electron')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">ELECTRON</span>
+</button>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-cyan-950 font-mono text-[9px] text-cyan-500/70 flex justify-between">
+<span class="">TACTILE WORKBENCHES</span><span class="">6 DESKTOP &amp; WEB LIBS</span>
+</div>
+</div>
+<!-- 03 / BACKEND & SYSTEMS -->
+<div class="p-3.5 bg-[#081f33]/70 border border-cyan-900/60 flex flex-col justify-between hover:border-cyan-700/80 transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-cyan-900/50">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-mono text-xs text-white uppercase font-bold tracking-wider">03 / BACKEND &amp; SYSTEMS</span>
+</div>
+<span class="font-mono text-[9px] text-cyan-400/70 uppercase">SERVERS &amp; PROTOCOLS</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('node')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">NODE.JS</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('express')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">EXPRESS</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('fastapi')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">FASTAPI</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('rest')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">REST APIs</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('websockets')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">WEBSOCKETS</span>
+</button>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-cyan-950 font-mono text-[9px] text-cyan-500/70 flex justify-between">
+<span class="">ASYNC STREAMING</span><span class="">5 SERVERS &amp; STACKS</span>
+</div>
+</div>
+<!-- 04 / AI & ML -->
+<div class="p-3.5 bg-[#081f33]/70 border border-cyan-900/60 flex flex-col justify-between hover:border-cyan-700/80 transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-cyan-900/50">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-mono text-xs text-white uppercase font-bold tracking-wider">04 / AI &amp; ML</span>
+</div>
+<span class="font-mono text-[9px] text-cyan-400/70 uppercase">INFERENCE &amp; CLUSTERING</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('ml')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">MACHINE LEARNING</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('nlp')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">NLP</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('transformers')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">TRANSFORMERS</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('bert')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">BERT</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('ollama')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">OLLAMA</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('gemini')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">GEMINI API</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('clustering')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">DATA CLUSTERING</span>
+</button>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-cyan-950 font-mono text-[9px] text-cyan-500/70 flex justify-between">
+<span class="">DUAL INFERENCE</span><span class="">7 MODELS &amp; PIPELINES</span>
+</div>
+</div>
+<!-- 05 / SYSTEMS & SECURITY -->
+<div class="p-3.5 bg-[#081f33]/70 border border-cyan-900/60 flex flex-col justify-between hover:border-cyan-700/80 transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-cyan-900/50">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-mono text-xs text-white uppercase font-bold tracking-wider">05 / SYSTEMS &amp; SECURITY</span>
+</div>
+<span class="font-mono text-[9px] text-cyan-400/70 uppercase">AUTH &amp; CRYPTOGRAPHY</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('auth')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">AUTHENTICATION</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('jwt')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">JWT</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('totp')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">TOTP / MFA</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('argon2id')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">ARGON2ID</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('linux-pam')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">LINUX PAM</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('windows-cp')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">WINDOWS CREDENTIAL PROVIDER</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('macos-auth')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">MACOS AUTH PLUGIN</span>
+</button>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-cyan-950 font-mono text-[9px] text-cyan-500/70 flex justify-between">
+<span class="">HARDENED OS IDENTITY</span><span class="">7 CRYPTOGRAPHIC ENGINES</span>
+</div>
+</div>
+<!-- 06 / TOOLS & RUNTIMES -->
+<div class="p-3.5 bg-[#081f33]/70 border border-cyan-900/60 flex flex-col justify-between hover:border-cyan-700/80 transition-colors shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-cyan-900/50">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-mono text-xs text-white uppercase font-bold tracking-wider">06 / TOOLS &amp; RUNTIMES</span>
+</div>
+<span class="font-mono text-[9px] text-cyan-400/70 uppercase">DEV WORKFLOW</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('git')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">GIT</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('github')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">GITHUB</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('vscode')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">VS CODE</span>
+</button>
+<button class="tech-bp-node px-3 py-1.5 font-mono text-xs font-semibold border border-cyan-800/70 bg-[#0e2b46]/60 text-cyan-100 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5 shadow-sm cursor-pointer" data-cursor="POINTER" onclick="traceTechSpec('streamlit')">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span class="">STREAMLIT</span>
+</button>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-cyan-950 font-mono text-[9px] text-cyan-500/70 flex justify-between">
+<span class="">RAPID PROTOTYPING</span><span class="">4 ENVIRONMENTS</span>
+</div>
+</div>
+</div>
+<!-- Blueprint Bottom Footer Annotation -->
+<div class="flex flex-wrap items-center justify-between pt-4 mt-6 border-t border-cyan-950 font-mono text-[10px] text-cyan-400/80 relative z-20 gap-2">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="">NO PLACEHOLDER METERS • ZERO PSEUDO-PERCENTAGES • DIRECT VERIFIABLE SYSTEM EVIDENCE</span>
+</div>
+<div class="text-slate-400 flex items-center gap-2">
+<span class="">ATELIER DRAFTING SPEC 01/2025</span>
+<span class="text-cyan-500">•</span>
+<a class="text-cyan-300 hover:underline flex items-center gap-0.5" href="#project-wall">TRACE PROJECTS ↓</a>
+</div>
+</div>
+</div>
+</div></section>
+<!-- =========================================================================
+       COMPACT ASYMMETRIC ARCHIVAL WORKBENCH:
+       PAIR 1: LEARNING LOG + PINNED MILESTONES (SIDE-BY-SIDE ON DESKTOP)
+       ========================================================================= -->
+<section class="relative w-full pt-2 pb-4 flex flex-col items-center">
+<div class="w-full max-w-5xl px-2 md:px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: LEARNING LOG (ARCHIVAL PINNED DOCUMENTS WITH CONNECTIVE RED THREAD) -->
+<div class="lg:col-span-6 space-y-3" id="learning">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-code text-[11px] uppercase tracking-widest text-paper-crisp">LEARNING LOG // FORMAL CURRICULUMS</span>
+<span class="h-px bg-surface-container-highest flex-1"></span>
+</div>
+<div class="relative space-y-3 pt-0.5">
+<!-- SVG Connective Thread between Document 1 and 2 -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-20 overflow-visible">
+<path d="M 50 140 Q 30 180 280 230" fill="none" stroke="#d71920" stroke-dasharray="3,3" stroke-width="1.5"></path>
+</svg>
+<!-- Document 01: LPU AI Summer Training -->
+<article class="relative p-4 bg-paper-crisp text-ink-black shadow-lg -rotate-1 border-t-4 border-primary-container">
+<div class="absolute -top-2.5 left-6 pin-3d-red !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1.5 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-primary-container uppercase font-bold">DOCUMENT 01 // 2026</span>
+<span class="px-1.5 py-0.2 bg-primary-container text-on-primary font-label-code text-[9px] font-bold uppercase shadow-sm">GRADE: O (90%+)</span>
+</div>
+<h3 class="font-headline-lg text-lg uppercase mt-1 leading-tight">SUMMER TRAINING: AI FROM BASICS TO AGENTIC AI</h3>
+<p class="font-annotation-md text-xs text-pencil-lead mt-0.5">Lovely Professional University (Jun 2026 – Jul 2026)</p>
+<p class="font-body-sm text-xs text-ink-black/90 mt-1 leading-relaxed">
+  Formal curriculum covering AI fundamentals, machine learning principles, LLM-based applications, prompt engineering, agentic AI concepts, and multi-step AI workflows.
+</p>
+<div class="mt-2.5 pt-1.5 border-t border-ink-black/10 flex flex-wrap gap-1 font-label-code text-[9px]">
+<span class="bg-paper-manila px-1.5 py-0.5 text-ink-black">AI Fundamentals</span>
+<span class="bg-paper-manila px-1.5 py-0.5 text-ink-black">Machine Learning</span>
+<span class="bg-paper-manila px-1.5 py-0.5 text-ink-black">LLM Applications</span>
+<span class="bg-paper-manila px-1.5 py-0.5 text-ink-black">Prompt Engineering</span>
+<span class="bg-paper-manila px-1.5 py-0.5 text-ink-black">Agentic AI</span>
+</div>
+</article>
+<!-- Document 02: React.js MOOC Specialization -->
+<article class="relative p-4 bg-paper-manila text-ink-black shadow-md rotate-1 border-t-4 border-pin-blue">
+<div class="absolute -top-2.5 right-6 pin-3d-blue !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1.5 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-pin-blue uppercase font-bold">DOCUMENT 02 // 2025</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-paper-crisp font-label-code text-[9px] uppercase font-bold shadow-sm">15+ HOURS</span>
+</div>
+<h3 class="font-headline-lg text-lg uppercase mt-1 leading-tight">REACT.JS MOOC SPECIALIZATION</h3>
+<p class="font-annotation-md text-xs text-pencil-lead mt-0.5">Tech Veda (Mar 2025) • Proctored Examination</p>
+<p class="font-body-sm text-xs text-ink-black/90 mt-1 leading-relaxed">
+  15+ hour proctored MOOC on modern React, component state architecture, functional paradigms, lifecycle hooks, and virtual DOM reconciliation.
+</p>
+<div class="mt-2.5 pt-1.5 border-t border-ink-black/10 flex flex-wrap gap-1 font-label-code text-[9px]">
+<span class="bg-paper-crisp px-1.5 py-0.5 text-ink-black">React.js Core</span>
+<span class="bg-paper-crisp px-1.5 py-0.5 text-ink-black">Component State</span>
+<span class="bg-paper-crisp px-1.5 py-0.5 text-ink-black">Modern Hooks</span>
+<span class="bg-paper-crisp px-1.5 py-0.5 text-ink-black">Proctored Exam</span>
+</div>
+</article>
+</div>
+</div>
+<!-- RIGHT COLUMN: PINNED MILESTONES (ASYMMETRICAL HIERARCHICAL OBJECTS) -->
+<div class="lg:col-span-6 space-y-3" id="milestones">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-[11px] uppercase tracking-widest text-paper-crisp">PINNED MILESTONES // COMPETITIONS &amp; STREAKS</span>
+<span class="h-px bg-surface-container-highest flex-1"></span>
+</div>
+<div class="space-y-3 pt-0.5">
+<!-- Dominant Object: LeetCode Contest Result Sheet -->
+<article class="relative p-4 bg-paper-crisp text-ink-black shadow-lg border-t-4 border-ink-black">
+<div class="absolute -top-2.5 left-1/2 -translate-x-1/2 pin-3d-red !w-3 !h-3"></div>
+<div class="flex items-center justify-between pb-1.5 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-pin-blue font-bold uppercase">DOMINANT OBJECT // BENCHMARK</span>
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">LEETCODE CONTEST</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-1.5">
+<div>
+<h3 class="font-headline-lg text-xl uppercase leading-none">BIWEEKLY CONTEST 187</h3>
+<p class="font-body-sm text-[11px] text-pencil-lead mt-0.5">Timed competitive coding contest solving algorithmic problems under constraint.</p>
+</div>
+<div class="p-2.5 bg-surface-container-lowest text-on-surface text-center shrink-0 min-w-[130px]">
+<span class="font-label-code text-[8px] text-wall-slate uppercase block leading-none">WORLDWIDE STANDING</span>
+<span class="font-headline-lg text-xl text-paper-crisp block mt-0.5 leading-tight">4,676 / 39,000+</span>
+<span class="font-annotation-md text-xs text-secondary block leading-none">Top ~12% participants</span>
+</div>
+</div>
+</article>
+<!-- Two Compact Asymmetrical Sub-Objects -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Smaller Pinned Note: 50-Day Badge -->
+<article class="relative p-3.5 bg-paper-kraft text-ink-black shadow -rotate-1 border border-ink-black/15">
+<div class="absolute -top-2 left-4 pin-3d-red !w-2.5 !h-2.5"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-primary-container font-bold uppercase">BADGE</span>
+<span class="font-headline-md text-[11px] text-primary-container font-bold">50+ DAYS</span>
+</div>
+<h4 class="font-headline-lg text-sm uppercase mt-1 leading-tight">LEETCODE 50-DAY BADGE</h4>
+<p class="font-body-sm text-[10px] text-ink-black/90 mt-0.5 leading-snug">
+  50 consecutive days of algorithmic problem solving in C++, practicing data structures and patterns.
+</p>
+</article>
+<!-- Distinct Physical Document: Code-A-Haunt 2.0 -->
+<article class="relative p-3.5 bg-paper-manila text-ink-black shadow rotate-1 border border-ink-black/15">
+<div class="absolute -top-2 right-4 pin-3d-blue !w-2.5 !h-2.5"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-wall-midgray font-bold uppercase">HACKATHON</span>
+<span class="font-label-code text-[8px] bg-ink-black text-paper-crisp px-1 py-0.2">FEB 2025</span>
+</div>
+<h4 class="font-headline-lg text-sm uppercase mt-1 leading-tight">CODE-A-HAUNT 2.0</h4>
+<p class="font-body-sm text-[10px] text-ink-black/90 mt-0.5 leading-snug">
+  State-level inter-university hackathon organized by Lovely Professional University in February 2025.
+</p>
+</article>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       COMPACT ASYMMETRIC ARCHIVAL WORKBENCH:
+       PAIR 2: ACADEMIC RECORD + CERTIFICATE STACK (SIDE-BY-SIDE ON DESKTOP)
+       ========================================================================= -->
+<section class="relative w-full pt-2 pb-6 flex flex-col items-center" id="education">
+<div class="w-full max-w-5xl px-2 md:px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: ACADEMIC RECORD (ONE COMPACT RESTRAINED ARCHIVE SHEET) -->
+<div class="lg:col-span-7 space-y-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-pin-blue"></span>
+<span class="font-label-code text-[11px] uppercase tracking-widest text-paper-crisp">ACADEMIC RECORD // SCHOLASTIC TRAJECTORY</span>
+<span class="h-px bg-surface-container-highest flex-1"></span>
+</div>
+<div class="relative p-4 md:p-5 bg-paper-crisp text-ink-black shadow-lg border-l-4 border-primary-container">
+<div class="absolute -top-2.5 left-6 pin-3d-red !w-3 !h-3"></div>
+<!-- Dominant Degree Entry -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-ink-black/10">
+<div>
+<span class="font-label-code text-[9px] text-primary-container font-bold uppercase">B.TECH IN COMPUTER SCIENCE &amp; ENGINEERING</span>
+<h3 class="font-headline-lg text-xl uppercase mt-0.5 leading-none">LOVELY PROFESSIONAL UNIVERSITY</h3>
+<span class="font-annotation-md text-xs text-pencil-lead">Aug 2024 – Present • Punjab, India</span>
+</div>
+<div class="px-3 py-1 bg-paper-manila shadow-inner text-right shrink-0">
+<span class="font-label-code text-[8px] text-wall-midgray uppercase block leading-none">CUMULATIVE CGPA</span>
+<span class="font-headline-lg text-xl text-primary-container font-bold leading-none mt-0.5">8.77 / 10.0</span>
+</div>
+</div>
+<p class="font-body-sm text-xs text-ink-black/90 mt-2 leading-relaxed">
+  Undergraduate coursework in Data Structures, Algorithms, Computer Organization, Database Systems, and Object-Oriented Software Design.
+</p>
+<!-- Two Attached Slips: Schooling -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-3 pt-2.5 border-t border-ink-black/10">
+<div class="p-2.5 bg-paper-manila shadow-sm relative border-l-2 border-pin-blue">
+<span class="font-label-code text-[8px] text-wall-midgray uppercase block">HIGHER SECONDARY (CLASS XII) // 2022 – 2023</span>
+<h4 class="font-headline-md text-[11px] uppercase mt-0.5">M.R.S. SR. SEC. SCHOOL</h4>
+<div class="mt-1 flex items-center justify-between pt-0.5 border-t border-ink-black/10">
+<span class="font-annotation-md text-[10px] text-pencil-lead">Science Stream</span>
+<span class="font-headline-md text-xs text-ink-black font-bold">94.4%</span>
+</div>
+</div>
+<div class="p-2.5 bg-paper-kraft shadow-sm relative border-l-2 border-primary-container">
+<span class="font-label-code text-[8px] text-wall-midgray uppercase block">SECONDARY (CLASS X) // 2020 – 2021</span>
+<h4 class="font-headline-md text-[11px] uppercase mt-0.5">M.R.S. SR. SEC. SCHOOL</h4>
+<div class="mt-1 flex items-center justify-between pt-0.5 border-t border-ink-black/10">
+<span class="font-annotation-md text-[10px] text-pencil-lead">General Sciences</span>
+<span class="font-headline-md text-xs text-ink-black font-bold">97.0%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: CERTIFICATE STACK (FANNABLE COMPACT 3-CARD STACK) -->
+<div class="lg:col-span-5 space-y-3" id="certificates">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-[11px] uppercase tracking-widest text-paper-crisp">CERTIFICATE STACK // CLICK TO FAN</span>
+<span class="h-px bg-surface-container-highest flex-1"></span>
+</div>
+<div class="relative w-full h-[210px] flex items-center justify-center select-none pt-0.5">
+<!-- Card 0: Infosys -->
+<div class="cert-card absolute w-full p-3.5 bg-paper-crisp text-ink-black shadow-lg transition-all duration-300 z-30 cursor-pointer -rotate-2" data-cursor="POINTER" id="cert-card-0" onclick="reorderCertificates(0)">
+<div class="absolute -top-2 left-6 pin-3d-red !w-2.5 !h-2.5"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-primary-container font-bold uppercase">CREDENTIAL 01</span>
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">AUG 2026</span>
+</div>
+<h4 class="font-headline-lg text-base uppercase mt-1 leading-snug">DATABASE MANAGEMENT SYSTEM PART - I</h4>
+<p class="font-annotation-md text-xs text-pencil-lead">Infosys Springboard</p>
+<p class="font-body-sm text-[10px] text-ink-black/80 mt-0.5 leading-tight">
+  Relational database schemas, normalization, primary and foreign indexing, and SQL queries.
+</p>
+</div>
+<!-- Card 1: JPMorgan / Forage -->
+<div class="cert-card absolute w-full p-3.5 bg-paper-manila text-ink-black shadow-md transition-all duration-300 z-20 cursor-pointer rotate-1 translate-y-2.5" data-cursor="POINTER" id="cert-card-1" onclick="reorderCertificates(1)">
+<div class="absolute -top-2 left-10 pin-3d-blue !w-2.5 !h-2.5"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-pin-blue font-bold uppercase">CREDENTIAL 02</span>
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">MAR 2026</span>
+</div>
+<h4 class="font-headline-lg text-base uppercase mt-1 leading-snug">SOFTWARE ENGINEERING SIMULATION</h4>
+<p class="font-annotation-md text-xs text-pencil-lead">JPMorgan Chase &amp; Co. / Forage</p>
+<p class="font-body-sm text-[10px] text-ink-black/80 mt-0.5 leading-tight">
+  Financial data feed interfacing, visualization graph adjustments, and code test suites.
+</p>
+</div>
+<!-- Card 2: CSE Pathshala -->
+<div class="cert-card absolute w-full p-3.5 bg-paper-kraft text-ink-black shadow transition-all duration-300 z-10 cursor-pointer rotate-3 translate-y-5" data-cursor="POINTER" id="cert-card-2" onclick="reorderCertificates(2)">
+<div class="absolute -top-2 left-14 pin-3d-red !w-2.5 !h-2.5"></div>
+<div class="flex items-center justify-between pb-1 border-b border-ink-black/10">
+<span class="font-label-code text-[9px] text-wall-midgray font-bold uppercase">CREDENTIAL 03</span>
+<span class="font-label-code text-[9px] text-wall-midgray uppercase">JAN 2025</span>
+</div>
+<h4 class="font-headline-lg text-base uppercase mt-1 leading-snug">C PROGRAMMING LIVE COURSE</h4>
+<p class="font-annotation-md text-xs text-pencil-lead">CSE Pathshala</p>
+<p class="font-body-sm text-[10px] text-ink-black/80 mt-0.5 leading-tight">
+  Pointers, structures, dynamic memory allocation, and basic file operations in C.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       CONTACT SECTION: PINNED DISPATCH NOTE (#contact-note)
+       ========================================================================= -->
+<section class="relative w-full pt-2 pb-8 flex flex-col items-center" id="contact-note" style="scroll-margin-top: 5rem;">
+<div class="relative w-full max-w-xl p-5 md:p-6 bg-paper-crisp text-ink-black shadow-xl rotate-[0.4deg]"><div class="absolute -top-2.5 left-1/2 -translate-x-1/2 pin-3d-red !w-3 !h-3"></div><div class="flex items-center justify-between pb-2 border-b border-ink-black/15"><span class="font-label-code text-[11px] text-primary-container uppercase font-bold tracking-widest">DISPATCH DESK // ATELIER MAIL</span><span class="font-annotation-md text-xs text-pencil-lead">Open to learning experiences &amp; collaboration</span></div><h2 class="font-headline-xl text-3xl md:text-4xl uppercase tracking-tight text-ink-black mt-2 leading-none">CONTACT</h2><p class="font-body-md text-xs md:text-sm text-ink-black/90 mt-1.5 leading-relaxed">Have a project idea, technical challenge, or learning opportunity worth exploring? Drop a note.</p><div class="mt-3.5 p-3.5 bg-paper-manila shadow-inner flex flex-col gap-3"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5"><div class="truncate"><span class="font-label-code text-[8px] text-wall-midgray uppercase block leading-none mb-0.5">DIRECT DISPATCH EMAIL</span><a class="font-headline-md text-xs md:text-sm text-ink-black hover:text-primary-container transition-colors underline select-all leading-tight block min-h-[44px] flex items-center" data-cursor="POINTER" href="mailto:visheshjangir1802@gmail.com" aria-label="Compose email to Vishesh Jangir at visheshjangir1802@gmail.com">visheshjangir1802@gmail.com</a></div><span class="font-annotation-md text-xs text-wall-slate hidden sm:block">click to compose</span></div><div class="flex flex-wrap items-center gap-2 pt-2 border-t border-ink-black/10"><a class="flex-1 min-w-[130px] px-3.5 py-2 bg-primary-container text-on-primary font-headline-md text-xs uppercase tracking-wider shadow hover:opacity-95 transition-opacity flex items-center justify-center gap-1.5 min-h-[44px]" data-cursor="POINTER" href="mailto:visheshjangir1802@gmail.com" aria-label="Compose email to Vishesh Jangir at visheshjangir1802@gmail.com"><span class="">[ SEND EMAIL ↗ ]</span></a><button class="px-3.5 py-2 bg-ink-black text-paper-crisp font-headline-md text-xs uppercase tracking-wider shadow hover:bg-surface-container-highest transition-colors relative min-h-[44px] flex items-center justify-center gap-1 shrink-0" data-cursor="POINTER" onclick="copyEmail()"><span class="" id="copy-label">COPY EMAIL</span><span class="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-ink-black text-paper-crisp font-label-code text-[9px] opacity-0 transition-opacity pointer-events-none" id="copied-badge">COPIED ✓</span></button><a class="px-3 py-2 bg-surface-container-high hover:bg-surface-container-highest text-ink-black font-headline-md text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-1 min-h-[44px] shrink-0 border border-ink-black/15" data-cursor="POINTER" href="https://github.com/VisheshJangir645" rel="noopener noreferrer" target="_blank"><span class="">GITHUB</span><span class="material-symbols-outlined text-[13px]">open_in_new</span></a></div></div><div class="mt-4 pt-2 border-t border-ink-black/15 flex items-center justify-between font-annotation-md text-xs text-pencil-lead"><span class="">Lovely Professional University • Punjab, India</span><span class="font-label-code text-[9px] text-ink-black uppercase">STUDIO WALL // 2025</span></div></div>
+</section>
+</div>
+</main>
+<!-- EXPANDED TACTILE PROJECT SPEC MODAL -->
+<div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-3 md:p-4 overflow-y-auto" id="project-modal"><div class="relative w-full max-w-3xl bg-paper-crisp text-ink-black p-5 md:p-7 paper-shadow-lifted my-6 border-t-8 border-primary-container rounded-none transition-all transform scale-100" id="modal-inner"><button class="absolute -top-3.5 right-6 pin-3d-red flex items-center justify-center text-white cursor-pointer shadow-xl hover:scale-110 transition-transform !w-5 !h-5" data-cursor="POINTER" onclick="closeProjectModal()" title="Close Dossier" aria-label="Close Project Dossier"><span class="text-[9px] font-bold">✕</span></button><div class="flex items-center justify-between pb-2 border-b border-ink-black/15"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-label-code text-[11px] uppercase font-bold tracking-widest text-primary-container" id="modal-category">TACTILE SPECIFICATION DOSSIER</span></div><button class="font-label-code text-[10px] uppercase tracking-wider text-wall-slate hover:text-ink-black underline cursor-pointer min-h-[32px] flex items-center" data-cursor="POINTER" onclick="closeProjectModal()">[ CLOSE SHEET ✕ ESC ]</button></div><div class="mt-3"><h2 class="font-headline-xl text-2xl md:text-4xl uppercase tracking-tight text-ink-black leading-tight" id="modal-title">PROJECT TITLE</h2><div class="font-annotation-lg text-base md:text-lg text-primary-container mt-0.5" id="modal-tagline">Tagline description</div></div><div class="mt-4 flex flex-col gap-3"><div><h4 class="font-label-code text-[11px] font-bold uppercase tracking-wider text-ink-black/70">1. ARCHITECTURAL OVERVIEW</h4><p class="font-body-md text-xs md:text-sm text-ink-black/90 mt-0.5 leading-relaxed" id="modal-overview">Detailed technical description.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 bg-paper-manila p-3 rounded-none border border-ink-black/10"><div><h4 class="font-label-code text-[10px] font-bold uppercase tracking-wider text-primary-container">2. PROBLEM CONTEXT</h4><p class="font-body-sm text-xs text-ink-black/90 mt-1 leading-snug" id="modal-problem">Problem context.</p></div><div><h4 class="font-label-code text-[10px] font-bold uppercase tracking-wider text-emerald-700">3. ENGINEERING SOLUTION</h4><p class="font-body-sm text-xs text-ink-black/90 mt-1 leading-snug" id="modal-solution">Solution.</p></div></div><div><h4 class="font-label-code text-[11px] font-bold uppercase tracking-wider text-ink-black/70">4. SYSTEM INTERACTIVE SCHEMATIC</h4><div class="mt-1 p-3 bg-surface-container-lowest text-on-surface shadow" id="modal-schematic-container"></div></div><div><h4 class="font-label-code text-[11px] font-bold uppercase tracking-wider text-ink-black/70">5. KEY VERIFIED DETAILS</h4><ul class="mt-1 space-y-1.5 font-body-sm text-xs text-ink-black/90" id="modal-bullets"></ul></div><div><h4 class="font-label-code text-[11px] font-bold uppercase tracking-wider text-ink-black/70">6. TECHNOLOGY BLUEPRINT</h4><div class="flex flex-wrap gap-1 mt-1.5" id="modal-tags"></div></div></div><div class="mt-5 pt-3 border-t border-ink-black/15 flex flex-wrap items-center justify-between gap-3"><span class="font-annotation-md text-xs text-wall-midgray">Verified Dossier • Vishesh Jangir</span><a class="px-4 py-2 bg-primary-container text-on-primary hover:opacity-95 font-headline-md text-xs uppercase tracking-wider transition-opacity flex items-center gap-1.5 shadow min-h-[40px]" data-cursor="POINTER" href="https://github.com/VisheshJangir645" id="modal-repo-link" rel="noopener noreferrer" target="_blank"><span class="">GITHUB REPOSITORY</span><span class="material-symbols-outlined text-[14px]">north_east</span></a></div></div></div>
+<!-- FOOTER -->
+<footer class="relative z-10 w-full bg-surface-container-lowest/95 backdrop-blur-sm py-3 border-t border-surface-container-high/40">
+<div class="w-full max-w-6xl mx-auto px-4 md:px-gutter flex flex-col sm:flex-row items-center justify-between gap-1.5 font-label-code text-[10px] text-wall-slate">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-pin-blue"></div>
+<span class="">ATELIER WORKBENCH // VISHESH JANGIR</span>
+</div>
+<div class="font-annotation-md text-xs text-on-surface-variant">
+  “applied thought anchored to constraint”
+</div>
+<div>
+<span class="">2025 • PORTFOLIO</span>
+</div>
+</div>
+</footer><script id="blueprint-tech-spec-script">
+const BLUEPRINT_SKILL_TRACE = {
+  'cpp': { name: 'C++', category: '01 / LANGUAGES', project: 'leetcode', label: 'LEETCODE & DSA', role: 'Competitive programming engine used for LeetCode Biweekly Contest 187 (top 12%) and daily 50+ day streak badge.' },
+  'python': { name: 'PYTHON', category: '01 / LANGUAGES', project: 'aegis', label: 'AEGIS & CHRONOMIND', role: 'Primary backend runtime for Aegis security telemetry, Chronomind ML data clustering, and asynchronous security services.' },
+  'javascript': { name: 'JAVASCRIPT', category: '01 / LANGUAGES', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'ES6+ event-driven streaming sockets, browser DOM manipulation, and Node.js proxy execution.' },
+  'typescript': { name: 'TYPESCRIPT', category: '01 / LANGUAGES', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Strict static typings across VS Code companion extension, side-by-side Diff Preview, and Electron IPC bus.' },
+  'sql': { name: 'SQL', category: '01 / LANGUAGES', project: 'aegis', label: 'DATABASE & AEGIS', role: 'Relational database schema normalization, primary and foreign key indexing, certified via Infosys Springboard.' },
+  'html': { name: 'HTML', category: '02 / FRONTEND', project: 'assistant', label: 'AI ASSISTANT & CHRONOMIND', role: 'Semantic DOM architecture, accessibility structures, and canvas substrate primitives.' },
+  'css': { name: 'CSS', category: '02 / FRONTEND', project: 'chronomind', label: 'CHRONOMIND & DESKTOP', role: 'Interactive SVG layout, dynamic keyframe styling, and responsive drafting canvas grids.' },
+  'react': { name: 'REACT', category: '02 / FRONTEND', project: 'assistant', label: 'AI CODING ASSISTANT & CHRONOMIND', role: 'Component state orchestration and reactive diff trees for desktop client and timeline scrubbing.' },
+  'vite': { name: 'VITE', category: '02 / FRONTEND', project: 'chronomind', label: 'CHRONOMIND', role: 'High-speed ES module development environment and optimized production bundling.' },
+  'tailwind': { name: 'TAILWIND CSS', category: '02 / FRONTEND', project: 'assistant', label: 'ATELIER WORKBENCH', role: 'Utility-first tactile styling, bespoke color tokens, and physical atelier paper substrates.' },
+  'electron': { name: 'ELECTRON', category: '02 / FRONTEND', project: 'assistant', label: 'LOCAL-FIRST CODING ASSISTANT', role: 'Native multi-window management, persistent background process bridge, and local filesystem access.' },
+  'node': { name: 'NODE.JS', category: '03 / BACKEND', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Local HTTP streaming server coordinating Server-Sent Events (SSE) and clean socket teardowns across chats.' },
+  'express': { name: 'EXPRESS', category: '03 / BACKEND', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Lightweight REST routing and real-time streaming endpoint for local LLM token distribution.' },
+  'fastapi': { name: 'FASTAPI', category: '03 / BACKEND', project: 'aegis', label: 'AEGIS AUTH HUB', role: 'High-assurance asynchronous API engine handling Argon2id hashing and WebSocket anomaly telemetry.' },
+  'rest': { name: 'REST APIs', category: '03 / BACKEND', project: 'aegis', label: 'AEGIS & ASSISTANT', role: 'Stateless request contracts, JSON payload validation, and clean endpoint lifecycle protocols.' },
+  'websockets': { name: 'WEBSOCKETS', category: '03 / BACKEND', project: 'aegis', label: 'AEGIS', role: 'Bi-directional real-time event pipeline streaming live authentication anomalies and rate-limit violations.' },
+  'ml': { name: 'MACHINE LEARNING', category: '04 / AI & ML', project: 'chronomind', label: 'CHRONOMIND', role: 'Temporal event clustering models with source confidence scoring algorithms.' },
+  'nlp': { name: 'NLP', category: '04 / AI & ML', project: 'chronomind', label: 'CHRONOMIND', role: 'Historical text corpus normalization, semantic grouping, and automated narrative extraction.' },
+  'transformers': { name: 'TRANSFORMERS', category: '04 / AI & ML', project: 'assistant', label: 'AI SUMMER TRAINING', role: 'Self-attention architecture, token sequence prediction, and agentic multi-step workflows.' },
+  'bert': { name: 'BERT', category: '04 / AI & ML', project: 'chronomind', label: 'CHRONOMIND', role: 'Bidirectional representation encoding for textual historical milestone similarity matching.' },
+  'ollama': { name: 'OLLAMA', category: '04 / AI & ML', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Local on-device LLM inference execution with zero external network latency and offline fallback.' },
+  'gemini': { name: 'GEMINI API', category: '04 / AI & ML', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Cloud reasoning fallback integration coordinated via the local Node.js streaming proxy.' },
+  'clustering': { name: 'DATA CLUSTERING', category: '04 / AI & ML', project: 'chronomind', label: 'CHRONOMIND', role: 'Algorithmic co-temporal event clustering based on timestamp proximity and source confidence.' },
+  'auth': { name: 'AUTHENTICATION', category: '05 / SECURITY', project: 'aegis', label: 'AEGIS', role: 'Hardened identity verification pipeline combining multi-factor TOTP and cryptographic verification.' },
+  'jwt': { name: 'JWT', category: '05 / SECURITY', project: 'aegis', label: 'AEGIS', role: 'Cryptographic claim signing, scoped bearer authorizations, and short-lived session token lifecycle.' },
+  'totp': { name: 'TOTP / MFA', category: '05 / SECURITY', project: 'aegis', label: 'AEGIS', role: 'RFC 6238 compliant time-based one-time password verification with rotating secrets.' },
+  'argon2id': { name: 'ARGON2ID', category: '05 / SECURITY', project: 'aegis', label: 'AEGIS', role: 'Memory-hard and time-cost tuned password hashing algorithm resistant to GPU/ASIC attacks.' },
+  'linux-pam': { name: 'LINUX PAM', category: '05 / SECURITY', project: 'aegis', label: 'SECURITY RESEARCH', role: 'Pluggable Authentication Modules integration for system-level multi-factor identity enforcement.' },
+  'windows-cp': { name: 'WINDOWS CREDENTIAL PROVIDER', category: '05 / SECURITY', project: 'aegis', label: 'SECURITY RESEARCH', role: 'Custom Credential Provider architecture for OS logon MFA validation.' },
+  'macos-auth': { name: 'MACOS AUTH PLUGIN', category: '05 / SECURITY', project: 'aegis', label: 'SECURITY RESEARCH', role: 'macOS Authorization Plugin pipeline for centralized enterprise authentication.' },
+  'git': { name: 'GIT', category: '06 / TOOLS', project: 'assistant', label: 'ALL PROJECTS', role: 'Version control branch strategies, atomic commits, and distributed code history management.' },
+  'github': { name: 'GITHUB', category: '06 / TOOLS', project: 'assistant', label: 'ALL PROJECTS', role: 'Pull request reviews, GitHub Actions CI/CD workflows, and open-source project publication.' },
+  'vscode': { name: 'VS CODE', category: '06 / TOOLS', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Companion extension engineering featuring non-modal side-by-side Diff Preview.' },
+  'streamlit': { name: 'STREAMLIT', category: '06 / TOOLS', project: 'assistant', label: 'AI CODING ASSISTANT', role: 'Rapid prompt prototyping web interface for testing dual inference token streaming rates.' }
+};
+
+function traceTechSpec(key) {
+  const data = BLUEPRINT_SKILL_TRACE[key];
+  if (!data) return;
+
+  // Highlight selected node
+  document.querySelectorAll('.tech-bp-node').forEach(btn => {
+    btn.classList.remove('node-selected');
+  });
+  const activeBtn = event.currentTarget || event.target.closest('.tech-bp-node');
+  if (activeBtn) {
+    activeBtn.classList.add('node-selected');
+  }
+
+  // Update Inline Trace Banner
+  const bannerText = document.getElementById('tech-trace-text');
+  const bannerActions = document.getElementById('tech-trace-actions');
+  if (bannerText && bannerActions) {
+    bannerText.innerHTML = `<span class="text-cyan-300 font-bold uppercase">${data.name} [${data.category}]:</span> <span class="text-white">${data.role}</span>`;
+    bannerActions.innerHTML = `
+      <span class="px-2 py-0.5 bg-[#0e2b46] border border-cyan-500/60 text-cyan-200 font-mono text-[10px] uppercase font-bold">APPLIED IN: ${data.label}</span>
+      <button class="px-2.5 py-1 bg-primary-container text-on-primary font-mono text-[10px] uppercase font-bold hover:opacity-90 transition-opacity cursor-pointer shadow flex items-center gap-1" onclick="openProjectDossier('${data.project}')">
+        <span>VIEW DOSSIER ↗</span>
+      </button>
+      <button class="font-mono text-[9px] text-cyan-400 hover:text-white underline cursor-pointer ml-1" onclick="resetTechTraceBanner()">[RESET]</button>
+    `;
+  }
+
+  // Highlight relevant project card
+  ['assistant', 'chronomind', 'aegis'].forEach(cId => {
+    const card = document.getElementById('card-' + cId);
+    if (card) {
+      if (data.project === cId || (data.project === 'aegis' && cId === 'aegis') || (data.label.includes('CHRONOMIND') && cId === 'chronomind') || (data.label.includes('ASSISTANT') && cId === 'assistant')) {
+        card.style.boxShadow = '0 0 0 3px #d71920, 0 20px 35px rgba(0,0,0,0.7)';
+        card.style.transition = 'box-shadow 0.3s ease';
+      } else {
+        card.style.boxShadow = '';
+      }
+    }
+  });
+}
+
+function resetTechTraceBanner() {
+  document.querySelectorAll('.tech-bp-node').forEach(btn => {
+    btn.classList.remove('node-selected');
+  });
+  const bannerText = document.getElementById('tech-trace-text');
+  const bannerActions = document.getElementById('tech-trace-actions');
+  if (bannerText && bannerActions) {
+    bannerText.innerHTML = '<span class="text-cyan-400 font-bold uppercase">INTERACTIVE SPEC TRACE:</span> Click any technology badge below to highlight verified project implementations.';
+    bannerActions.innerHTML = '<span class="font-mono text-[10px] text-cyan-400/70 uppercase">ALL 28 SKILLS SHOWN BELOW</span>';
+  }
+  ['assistant', 'chronomind', 'aegis'].forEach(cId => {
+    const card = document.getElementById('card-' + cId);
+    if (card) card.style.boxShadow = '';
+  });
+}
+</script>
+<!-- INTERACTION ENGINE SCRIPT -->
+<script>
+  /* 1. CUSTOM CONTEXTUAL TACTILE CURSOR */
+  const cursorEl = document.getElementById('tactile-cursor');
+  const cursorDot = document.getElementById('cursor-dot');
+  const cursorBadge = document.getElementById('cursor-badge');
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('mousemove', (e) => {
+      cursorEl.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+
+    const updateCursorState = (e) => {
+      const target = e.target.closest('[data-cursor]');
+      if (!target) {
+        cursorBadge.classList.add('hidden');
+        cursorDot.className = "w-3.5 h-3.5 rounded-full bg-primary-container border-2 border-paper-crisp shadow-md transition-all duration-150";
+        return;
+      }
+
+      const type = target.getAttribute('data-cursor');
+      cursorBadge.textContent = type;
+      cursorBadge.classList.remove('hidden');
+
+      if (type === 'DRAG') {
+        cursorDot.className = "w-4 h-4 rounded-full bg-tertiary border-2 border-ink-black shadow-lg scale-110";
+      } else if (type === 'INSPECT') {
+        cursorDot.className = "w-4 h-4 rounded-full bg-pin-blue border-2 border-paper-crisp shadow-lg scale-110";
+      } else if (type === 'POINTER') {
+        cursorDot.className = "w-3 h-3 rounded-full bg-paper-crisp border-2 border-ink-black shadow scale-100";
+      }
+    };
+
+    document.addEventListener('mouseover', updateCursorState);
+  }
+
+  /* 2. DRAGGABLE NOTES IN HERO */
+  const threadCanvas = document.getElementById('thread-canvas');
+  const centerPin = document.getElementById('center-hub-pin');
+  
+  const heroNotes = [
+    { id: 'note-ai', threadId: 'thread-ai', initialRotate: -3 },
+    { id: 'note-fe', threadId: 'thread-fe', initialRotate: 2 },
+    { id: 'note-bridge', threadId: 'thread-bridge', initialRotate: 3 },
+    { id: 'note-dsa', threadId: 'thread-dsa', initialRotate: -2 }
+  ];
+
+  function updateThreads() {
+    if (!centerPin || !threadCanvas) return;
+    const hubRect = centerPin.getBoundingClientRect();
+    const scrollX = window.scrollX || window.pageXOffset;
+    const scrollY = window.scrollY || window.pageYOffset;
+    const hubX = hubRect.left + hubRect.width / 2 + scrollX;
+    const hubY = hubRect.top + hubRect.height / 2 + scrollY;
+
+    heroNotes.forEach(item => {
+      const el = document.getElementById(item.id);
+      const thread = document.getElementById(item.threadId);
+      if (!el || !thread) return;
+
+      const pin = el.querySelector('.note-pin') || el;
+      const pinRect = pin.getBoundingClientRect();
+      const pinX = pinRect.left + pinRect.width / 2 + scrollX;
+      const pinY = pinRect.top + pinRect.height / 2 + scrollY;
+
+      const dist = Math.hypot(pinX - hubX, pinY - hubY);
+      const sag = Math.min(40, Math.max(12, dist * 0.08));
+      const midX = (hubX + pinX) / 2;
+      const midY = (hubY + pinY) / 2 + sag;
+
+      thread.setAttribute('d', `M ${hubX} ${hubY} Q ${midX} ${midY} ${pinX} ${pinY}`);
+    });
+  }
+
+  heroNotes.forEach(item => {
+    const el = document.getElementById(item.id);
+    if (!el) return;
+
+    let isDragging = false;
+    let startX, startY;
+    let initialLeft, initialTop;
+    let lastX = 0;
+
+    el.addEventListener('pointerdown', (e) => {
+      if (e.button !== 0 && e.pointerType === 'mouse') return;
+
+      if (e.pointerType === 'touch') {
+        el.style.transition = 'transform 0.2s ease';
+        el.style.transform = `rotate(${item.initialRotate * 2}deg) scale(1.04)`;
+        setTimeout(() => {
+          el.style.transition = 'transform 0.3s ease';
+          el.style.transform = `rotate(${item.initialRotate}deg) scale(1)`;
+        }, 300);
+        return;
+      }
+
+      isDragging = true;
+      el.setPointerCapture(e.pointerId);
+      startX = e.clientX;
+      startY = e.clientY;
+      lastX = e.clientX;
+
+      const rect = el.getBoundingClientRect();
+      const parentRect = el.offsetParent.getBoundingClientRect();
+      
+      initialLeft = rect.left - parentRect.left;
+      initialTop = rect.top - parentRect.top;
+
+      el.style.transition = 'none';
+      el.style.left = `${initialLeft}px`;
+      el.style.top = `${initialTop}px`;
+      el.style.right = 'auto';
+      el.style.bottom = 'auto';
+      el.style.zIndex = '50';
+      el.classList.add('paper-shadow-lifted');
+    });
+
+    el.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      
+      const velocity = (e.clientX - lastX);
+      const tilt = Math.max(-6, Math.min(6, velocity * 0.8));
+      lastX = e.clientX;
+
+      let newLeft = initialLeft + dx;
+      let newTop = initialTop + dy;
+
+      const parentRect = el.offsetParent.getBoundingClientRect();
+      const maxLeft = parentRect.width - el.offsetWidth - 6;
+      const maxTop = parentRect.height - el.offsetHeight - 6;
+      newLeft = Math.max(6, Math.min(maxLeft, newLeft));
+      newTop = Math.max(6, Math.min(maxTop, newTop));
+
+      el.style.left = `${newLeft}px`;
+      el.style.top = `${newTop}px`;
+      el.style.transform = `rotate(${tilt}deg) scale(1.04)`;
+
+      updateThreads();
+    });
+
+    const finishDrag = (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      try { el.releasePointerCapture(e.pointerId); } catch(err) {}
+
+      el.classList.remove('paper-shadow-lifted');
+      el.style.zIndex = '30';
+      el.style.transition = 'transform 0.3s ease';
+      el.style.transform = `rotate(${item.initialRotate}deg) scale(1)`;
+      setTimeout(() => {
+        el.style.transition = '';
+        updateThreads();
+      }, 300);
+    };
+
+    el.addEventListener('pointerup', finishDrag);
+    el.addEventListener('pointercancel', finishDrag);
+  });
+
+  window.addEventListener('resize', updateThreads);
+  window.addEventListener('scroll', updateThreads, { passive: true });
+  setTimeout(updateThreads, 150);
+
+  /* 3. ABOUT FLIP */
+  function toggleAboutFlip() {
+    const flipper = document.getElementById('about-flipper');
+    if (flipper.style.transform === 'rotateY(180deg)') {
+      flipper.style.transform = 'rotateY(0deg)';
+    } else {
+      flipper.style.transform = 'rotateY(180deg)';
+    }
+  }
+
+  /* 4. CERTIFICATE STACK REORDERING (FAN FORWARD) */
+  let certOrder = [0, 1, 2];
+  function reorderCertificates(clickedIndex) {
+    certOrder = certOrder.filter(i => i !== clickedIndex);
+    certOrder.unshift(clickedIndex);
+
+    const rotations = ['-rotate-2', 'rotate-1', 'rotate-3'];
+    const translates = ['translate-y-0', 'translate-y-2.5', 'translate-y-5'];
+    const zIndexes = ['z-30', 'z-20', 'z-10'];
+
+    certOrder.forEach((itemIdx, pos) => {
+      const card = document.getElementById(`cert-card-${itemIdx}`);
+      const bg = itemIdx === 0 ? 'bg-paper-crisp' : itemIdx === 1 ? 'bg-paper-manila' : 'bg-paper-kraft';
+      card.className = `cert-card absolute w-full p-3.5 ${bg} text-ink-black shadow-lg transition-all duration-300 cursor-pointer ${rotations[pos]} ${translates[pos]} ${zIndexes[pos]}`;
+    });
+  }
+
+  /* 5. COPY EMAIL FUNCTION */
+  function copyEmail() {
+    const email = 'visheshjangir1802@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+      const label = document.getElementById('copy-label');
+      const badge = document.getElementById('copied-badge');
+      label.innerText = 'COPIED ✓';
+      badge.classList.remove('opacity-0');
+      badge.classList.add('opacity-100');
+
+      setTimeout(() => {
+        label.innerText = 'COPY EMAIL';
+        badge.classList.remove('opacity-100');
+        badge.classList.add('opacity-0');
+      }, 2200);
+    });
+  }
+</script>
+<!-- CENTRALIZED PROJECT & TECHNICAL MAP REGISTRY -->
+<script>
+const PROJECTS_REGISTRY = {
+  assistant: {
+    title: 'LOCAL-FIRST AI CODING ASSISTANT',
+    category: 'DOSSIER #01 // AI & DEVELOPER TOOLS',
+    tagline: 'Desktop client, VS Code extension, and local HTTP streaming bridge.',
+    overview: 'A developer workflow suite combining an Electron + React desktop application, dedicated VS Code companion extension, and Streamlit chat interface. Implements dual inference across local Ollama models and cloud Gemini API, coordinated by a local Node.js/Express HTTP streaming server.',
+    problem: 'Developers experience socket leaks during interrupted streaming, UI freezes when local cache corrupts, and clumsy context switching between external chat portals and the code editor.',
+    solution: 'Engineered a local Node.js/Express HTTP streaming bridge streaming tokens directly over Server-Sent Events, an in-editor side-by-side diff preview, escape-to-cancel pipeline, and self-healing localStorage recovery.',
+    schematic: '<div class="flex flex-col items-center gap-2"><div class="grid grid-cols-3 gap-2 w-full text-center text-[10px] font-label-code"><div class="p-1.5 bg-surface-container-high text-paper-crisp border border-surface-container-highest">VS Code Extension (Diff Preview)</div><div class="p-1.5 bg-surface-container-high text-paper-crisp border border-surface-container-highest">Electron + React Desktop</div><div class="p-1.5 bg-surface-container-high text-paper-crisp border border-surface-container-highest">Streamlit Chat UI</div></div><div class="w-full p-2 bg-primary-container text-on-primary text-center font-label-code text-xs font-bold">Node.js / Express Local Bridge (SSE &bull; Escape-to-Cancel &bull; Clean Teardown)</div><div class="grid grid-cols-2 gap-2 w-full text-center text-[10px] font-label-code"><div class="p-1.5 bg-surface-container-high text-tertiary border border-tertiary/30">Ollama Local LLM (On-Device)</div><div class="p-1.5 bg-surface-container-high text-secondary border border-secondary/30">Google Gemini API (Cloud Reasoning)</div></div></div>',
+    bullets: [
+      '<strong>Side-by-Side Diff Preview:</strong> Non-modal side-by-side diff inspection before accepting assistant patch suggestions.',
+      '<strong>Escape-to-Cancel Pipeline:</strong> Instant abort controller signal terminating active streaming sockets.',
+      '<strong>Corrupted Storage Self-Healing:</strong> Safe fallback parsing protecting the desktop interface from UI freezes.',
+      '<strong>Multi-Conversation Socket Cleanup:</strong> Clean socket teardowns when switching conversations.'
+    ],
+    tags: ['TypeScript', 'React', 'Electron', 'Node.js', 'Express', 'Ollama', 'Gemini API', 'Streamlit', 'Server-Sent Events'],
+    repo: 'https://github.com/VisheshJangir645/assistant'
+  },
+  chronomind: {
+    title: 'CHRONOMIND',
+    category: 'DOSSIER #02 // FULL-STACK & MACHINE LEARNING',
+    tagline: 'Interactive timeline visualization for historical event datasets.',
+    overview: 'Full-stack historical research and visual exploration system. Integrates an interactive React + Vite frontend with a Python machine learning backend that clusters contemporaneous events and assigns reliability confidence scores to multi-source historical datasets.',
+    problem: 'Historical datasets often exist in fragmented text records, making temporal correlations and credibility verification cumbersome to discern.',
+    solution: 'Engineered an end-to-end processing pipeline utilizing Python clustering models paired with interactive SVG timeline scrubbing and source confidence indicators.',
+    schematic: '<div class="flex flex-col items-center gap-2"><div class="w-full p-2 bg-surface-container-high text-paper-crisp text-center font-label-code text-xs">Historical Event Archives (Structured Data Ingestion)</div><div class="w-full p-2 bg-[#172535] text-note-blueprint text-center font-label-code text-xs border border-note-blueprint/30">Python ML Processing &bull; Co-Temporal Event Clustering</div><div class="w-full p-2 bg-surface-container-high text-paper-crisp text-center font-label-code text-xs">React + Vite Timeline UI &bull; Confidence Scoring Scrubber</div></div>',
+    bullets: [
+      '<strong>Machine Learning Clustering:</strong> Thematic groupings of historical milestones by co-temporal indicators.',
+      '<strong>Confidence Scoring:</strong> Metric weighting for source reliability and archival cross-referencing.',
+      '<strong>Responsive Timeline Scrubber:</strong> Dynamic multi-era interactive timeline built with React and SVG.',
+      '<strong>Narrative Line Tracing:</strong> Generates continuous historical visual trajectories across eras.'
+    ],
+    tags: ['React', 'Vite', 'Python', 'Machine Learning', 'Data Clustering', 'Confidence Scoring', 'Tailwind CSS'],
+    repo: 'https://github.com/VisheshJangir645/Chronomind'
+  },
+  aegis: {
+    title: 'AEGIS',
+    category: 'DOSSIER #03 // SECURITY & BACKEND SYSTEMS',
+    tagline: 'Cryptographic Authentication & Live Threat Mitigation Hub.',
+    overview: 'High-assurance authentication and security intelligence engine built on Python and FastAPI. Implements cryptographic Argon2id password hashing, time-based one-time password (TOTP) two-factor authentication, and real-time WebSocket anomaly event telemetry.',
+    problem: 'Standard web applications are vulnerable to credential stuffing, dictionary attacks on legacy hash mechanisms, and delayed reaction times to authentication brute-force spikes.',
+    solution: 'Engineered a hardened FastAPI identity engine utilizing memory-hard Argon2id key derivation, RFC 6238 TOTP verification, and live WebSocket anomaly broadcasts to security operators.',
+    schematic: '<div class="flex flex-col items-center gap-2"><div class="w-full p-2 bg-surface-container-high text-paper-crisp text-center font-label-code text-xs">Client Request &bull; JWT &amp; TOTP Token Transmission</div><div class="w-full p-2 bg-ink-black text-primary border border-primary-container text-center font-label-code text-xs font-bold">FastAPI Core &bull; Argon2id KDF &bull; Anomaly Detection Filter</div><div class="grid grid-cols-2 gap-2 w-full text-center text-[10px] font-label-code"><div class="p-1.5 bg-surface-container-high text-paper-crisp border border-surface-container-highest">RFC 6238 MFA Engine</div><div class="p-1.5 bg-surface-container-high text-tertiary border border-tertiary/30">WebSocket Live Threat Broadcast</div></div></div>',
+    bullets: [
+      '<strong>Argon2id KDF:</strong> Memory-hard and time-cost parameter tuning to defend against GPU/ASIC password cracking.',
+      '<strong>Two-Factor TOTP:</strong> RFC 6238 compliant multi-factor verification with rotating recovery credentials.',
+      '<strong>Real-Time Threat Telemetry:</strong> WebSocket event channels streaming authentication anomalies and rate-limit violations.',
+      '<strong>Stateless JWT Validation:</strong> Secure claim verification with short-lived access and refresh lifecycle.'
+    ],
+    tags: ['FastAPI', 'Python', 'Argon2id', 'TOTP MFA', 'WebSockets', 'JWT', 'Security Telemetry'],
+    repo: 'https://github.com/VisheshJangir645/Aegis'
+  },
+  leetcode: {
+    title: 'LEETCODE & ALGORITHMIC PROBLEM SOLVING',
+    category: 'BENCHMARK // COMPETITIVE RIGOR',
+    tagline: '50+ Day streak badge, Biweekly Contest 187, and rigorous data structure decomposition.',
+    overview: 'Continuous discipline in C++ algorithmic problem solving. Reached top 12% in Biweekly Contest 187 out of 39,000+ competitors, earning a 50+ day streak badge through consistent optimization of graph, tree, and dynamic programming patterns.',
+    problem: 'Real-time software systems demand optimal time-and-space complexity, requiring foundational data structure mastery under strict runtime limits.',
+    solution: 'Applied rigorous decomposition of space-time trade-offs using modern C++ STL containers and algorithms.',
+    schematic: '<div class="p-3 bg-[#172535] text-center font-mono text-xs text-paper-crisp">C++ STL &bull; Algorithmic Graphs, Heaps &amp; DP &bull; 4,676 / 39,000+ Global Standing</div>',
+    bullets: [
+      '<strong>Biweekly Contest 187:</strong> 4,676 / 39,000+ worldwide standing (Top ~12%).',
+      '<strong>50+ Day Streak:</strong> Daily algorithmic consistency badge in C++.',
+      '<strong>Optimal Space-Time:</strong> Mastery over asymptotic time and memory trade-offs.'
+    ],
+    tags: ['C++', 'Algorithms', 'Data Structures', 'Competitive Programming', 'LeetCode'],
+    repo: 'https://github.com/VisheshJangir645'
+  }
+};
+
+/* CLEAN NON-DUPLICATED TECHNICAL MAP DATA MODEL */
+const TECH_SKILLS = [
+  /* 01 / FRONTEND */
+  {
+    id: 'react',
+    name: 'REACT',
+    category: '01 / FRONTEND',
+    clusterKey: 'frontend',
+    projects: ['assistant', 'chronomind'],
+    role: 'Component state orchestration and reactive diff trees for the AI Assistant desktop client and Chronomind timeline scrubbing interface.'
+  },
+  {
+    id: 'typescript',
+    name: 'TYPESCRIPT',
+    category: '01 / FRONTEND',
+    clusterKey: 'frontend',
+    projects: ['assistant'],
+    role: 'Strict static typings across the VS Code companion extension, Diff Preview renderers, and Electron IPC message bus.'
+  },
+  {
+    id: 'vite',
+    name: 'VITE',
+    category: '01 / FRONTEND',
+    clusterKey: 'frontend',
+    projects: ['chronomind'],
+    role: 'High-speed ES module development and optimized production bundling for the Chronomind visualizer.'
+  },
+  {
+    id: 'tailwind',
+    name: 'TAILWIND CSS',
+    category: '01 / FRONTEND',
+    clusterKey: 'frontend',
+    projects: ['assistant', 'chronomind'],
+    role: 'Utility-first tactile styling, bespoke color tokens, and responsive layout primitives anchored to physical atelier paper sheets.'
+  },
+  {
+    id: 'electron',
+    name: 'ELECTRON',
+    category: '01 / FRONTEND',
+    clusterKey: 'frontend',
+    projects: ['assistant'],
+    role: 'Native multi-window management, persistent background process bridge, and local filesystem access for desktop AI execution.'
+  },
+
+  /* 02 / BACKEND & SYSTEMS */
+  {
+    id: 'python',
+    name: 'PYTHON',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['aegis', 'chronomind'],
+    role: 'Core backend runtime for Aegis security telemetry, Chronomind ML data clustering, and rapid asynchronous API services.'
+  },
+  {
+    id: 'fastapi',
+    name: 'FASTAPI',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['aegis'],
+    role: 'High-assurance asynchronous API engine handling Argon2id hashing, RFC 6238 TOTP validation, and WebSocket event telemetry in Aegis.'
+  },
+  {
+    id: 'node-express',
+    name: 'NODE.JS / EXPRESS',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['assistant'],
+    role: 'Local HTTP streaming server coordinating Server-Sent Events (SSE), abort controllers, and clean socket teardowns across chats.'
+  },
+  {
+    id: 'websockets',
+    name: 'WEBSOCKETS',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['aegis'],
+    role: 'Bi-directional real-time event pipeline streaming live authentication anomalies and rate-limit violations to operators.'
+  },
+  {
+    id: 'jwt',
+    name: 'JWT',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['aegis'],
+    role: 'Cryptographic claim signing, scoped bearer authorizations, and controlled session token lifecycle in the Aegis identity hub.'
+  },
+  {
+    id: 'argon2id',
+    name: 'ARGON2ID',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['aegis'],
+    role: 'Memory-hard and time-cost tuned password hashing algorithm resistant to GPU and ASIC-assisted dictionary cracking.'
+  },
+  {
+    id: 'totp-mfa',
+    name: 'TOTP / MFA',
+    category: '02 / BACKEND & SYSTEMS',
+    clusterKey: 'backend',
+    projects: ['aegis'],
+    role: 'RFC 6238 compliant time-based one-time password verification with rotating secrets and single-use backup recovery codes.'
+  },
+
+  /* 03 / AI / ML */
+  {
+    id: 'ollama',
+    name: 'OLLAMA',
+    category: '03 / AI / ML',
+    clusterKey: 'aiml',
+    projects: ['assistant'],
+    role: 'Local on-device LLM inference execution with zero external network latency and offline detection handling.'
+  },
+  {
+    id: 'gemini',
+    name: 'GEMINI API',
+    category: '03 / AI / ML',
+    clusterKey: 'aiml',
+    projects: ['assistant'],
+    role: 'Cloud reasoning fallback integration coordinated via the local Node.js proxy for complex code completion queries.'
+  },
+  {
+    id: 'ml-clustering',
+    name: 'ML CLUSTERING',
+    category: '03 / AI / ML',
+    clusterKey: 'aiml',
+    projects: ['chronomind'],
+    role: 'Algorithmic event grouping based on temporal correlation indicators and source reliability confidence scores in Chronomind.'
+  },
+  {
+    id: 'nlp-pipelines',
+    name: 'NLP / DATA PIPELINES',
+    category: '03 / AI / ML',
+    clusterKey: 'aiml',
+    projects: ['chronomind'],
+    role: 'Historical archive sanitization, multi-source event reconciliation, and timeline narrative sequence extraction in Python.'
+  },
+  {
+    id: 'streamlit',
+    name: 'STREAMLIT',
+    category: '03 / AI / ML',
+    clusterKey: 'aiml',
+    projects: ['assistant'],
+    role: 'Rapid prompt prototyping web client for testing dual inference pathways and benchmark token rates.'
+  },
+
+  /* 04 / LANGUAGES & DATA */
+  {
+    id: 'cpp',
+    name: 'C++',
+    category: '04 / LANGUAGES & DATA',
+    clusterKey: 'langdata',
+    projects: ['leetcode'],
+    role: 'Primary competitive programming language. Used for LeetCode Biweekly Contest 187 (top 12%) and daily 50+ day streak badge.'
+  },
+  {
+    id: 'javascript',
+    name: 'JAVASCRIPT',
+    category: '04 / LANGUAGES & DATA',
+    clusterKey: 'langdata',
+    projects: ['assistant', 'chronomind'],
+    role: 'Modern ES6+ asynchronous workflows, event-driven socket handling, and DOM reconciliation across browser and node runtimes.'
+  },
+  {
+    id: 'sql',
+    name: 'SQL / RELATIONAL DB',
+    category: '04 / LANGUAGES & DATA',
+    clusterKey: 'langdata',
+    projects: ['aegis', 'chronomind'],
+    role: 'Relational database schema normalization, primary and foreign indexing, and optimized queries certified via Infosys Springboard.'
+  }
+];
+
+let selectedTechId = null;
+
+function renderTechnicalMap() {
+  const containers = {
+    'frontend': document.getElementById('cluster-frontend-container'),
+    'backend': document.getElementById('cluster-backend-container'),
+    'aiml': document.getElementById('cluster-aiml-container'),
+    'langdata': document.getElementById('cluster-langdata-container')
+  };
+
+  // Clear existing containers
+  Object.values(containers).forEach(c => { if(c) c.innerHTML = ''; });
+
+  TECH_SKILLS.forEach(skill => {
+    const parent = containers[skill.clusterKey];
+    if (!parent) return;
+
+    const btn = document.createElement('button');
+    btn.id = `skill-node-${skill.id}`;
+    btn.className = `tech-bp-node px-2.5 py-1.5 font-mono text-[11px] md:text-xs border border-cyan-800/70 bg-[#0b2238]/90 text-cyan-200 cursor-pointer hover:border-cyan-400 hover:text-white transition-all flex items-center gap-1.5`;
+    btn.setAttribute('data-cursor', 'POINTER');
+    btn.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span>[ ${skill.name} ]</span>`;
+    btn.onclick = () => selectSkillNode(skill.id);
+    parent.appendChild(btn);
+  });
+
+  renderInspectorSlip();
+}
+
+function selectSkillNode(nodeId) {
+  selectedTechId = nodeId;
+  const activeSkill = TECH_SKILLS.find(s => s.id === nodeId);
+
+  // Update styles across all skill chips
+  TECH_SKILLS.forEach(skill => {
+    const el = document.getElementById(`skill-node-${skill.id}`);
+    if (!el) return;
+    el.classList.remove('node-selected', 'node-dimmed');
+    if (skill.id === nodeId) {
+      el.classList.add('node-selected');
+    } else if (activeSkill && !skill.projects.some(p => activeSkill.projects.includes(p))) {
+      el.classList.add('node-dimmed');
+    }
+  });
+
+  // Highlight corresponding project cards in Project Wall
+  ['assistant', 'chronomind', 'aegis'].forEach(cId => {
+    const card = document.getElementById(`card-${cId}`);
+    if (card) {
+      if (activeSkill && activeSkill.projects.includes(cId)) {
+        card.style.boxShadow = '0 0 0 2px #d71920, 0 16px 32px rgba(0,0,0,0.6)';
+        card.style.transition = 'box-shadow 0.3s ease';
+      } else {
+        card.style.boxShadow = '';
+      }
+    }
+  });
+
+  renderInspectorSlip();
+}
+
+function resetTechInspection() {
+  selectedTechId = null;
+  TECH_SKILLS.forEach(skill => {
+    const el = document.getElementById(`skill-node-${skill.id}`);
+    if (el) el.classList.remove('node-selected', 'node-dimmed');
+  });
+  ['assistant', 'chronomind', 'aegis'].forEach(cId => {
+    const card = document.getElementById(`card-${cId}`);
+    if (card) card.style.boxShadow = '';
+  });
+  renderInspectorSlip();
+}
+
+function renderInspectorSlip() {
+  const container = document.getElementById('bp-slip-content');
+  if (!container) return;
+
+  if (!selectedTechId) {
+    // DEFAULT UNSELECTED STATE (Compact, no giant white void)
+    container.innerHTML = `
+      <div class="py-2">
+        <span class="font-label-code text-[9px] text-wall-midgray uppercase block mb-1">INTERACTIVE ATELIER GUIDE</span>
+        <h3 class="font-headline-lg text-xl uppercase text-ink-black leading-tight">SELECT A TECHNOLOGY</h3>
+        <p class="font-body-sm text-xs text-ink-black/85 mt-2 leading-relaxed">
+          Click any blueprint node to inspect applied architecture, implementation evidence, and trace live project dependencies.
+        </p>
+        <div class="mt-3.5 p-2 bg-paper-manila border border-ink-black/10 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+          <span class="font-label-code text-[9px] text-ink-black uppercase">Nodes highlight live project links</span>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  // SELECTED STATE
+  const skill = TECH_SKILLS.find(s => s.id === selectedTechId);
+  if (!skill) return;
+
+  const projectButtonsHtml = skill.projects.map(pId => {
+    const label = pId === 'assistant' ? 'AI ASSISTANT' : pId === 'chronomind' ? 'CHRONOMIND' : pId === 'aegis' ? 'AEGIS' : 'LEETCODE (DSA)';
+    const color = pId === 'aegis' ? 'bg-primary-container text-on-primary' : pId === 'assistant' ? 'bg-pin-blue text-paper-crisp' : pId === 'chronomind' ? 'bg-tertiary-container text-ink-black' : 'bg-emerald-600 text-white';
+    return `<button class="px-2 py-1 ${color} font-label-code text-[9px] uppercase font-bold shadow-sm hover:opacity-90 transition-opacity flex items-center gap-1 cursor-pointer" onclick="openProjectDossier('${pId}')">[ ${label} ↗ ]</button>`;
+  }).join('');
+
+  const primaryTarget = skill.projects[0];
+  const primaryLabel = primaryTarget === 'leetcode' ? 'INSPECT LEETCODE' : `OPEN DOSSIER [${primaryTarget.toUpperCase()}] ↗`;
+
+  container.innerHTML = `
+    <div>
+      <span class="font-label-code text-[9px] text-wall-midgray uppercase block">${skill.category}</span>
+      <h3 class="font-headline-lg text-2xl uppercase mt-0.5 text-ink-black leading-tight">${skill.name}</h3>
+    </div>
+
+    <div>
+      <span class="font-label-code text-[8px] text-primary-container uppercase font-bold block mb-1">USED IN:</span>
+      <div class="flex flex-wrap gap-1.5">
+        ${projectButtonsHtml}
+      </div>
+    </div>
+
+    <div class="p-2.5 bg-paper-manila border border-ink-black/10 shadow-inner">
+      <span class="font-label-code text-[8px] text-primary-container uppercase font-bold block mb-0.5">ROLE:</span>
+      <p class="font-body-sm text-xs text-ink-black/90 leading-snug">${skill.role}</p>
+    </div>
+
+    <div class="pt-2 border-t border-ink-black/15 flex flex-col gap-2">
+      <button class="w-full py-2 bg-primary-container text-on-primary font-headline-md text-xs uppercase tracking-wider shadow hover:opacity-95 transition-opacity flex items-center justify-center gap-1 min-h-[38px] cursor-pointer" onclick="openProjectDossier('${primaryTarget}')">
+        <span>${primaryLabel}</span>
+      </button>
+    </div>
+  `;
+}
+
+function filterProjects(cat) {
+  const cards = document.querySelectorAll('.project-dossier-card');
+  const buttons = document.querySelectorAll('.project-filter-btn');
+  buttons.forEach(b => {
+    b.classList.remove('bg-ink-black', 'text-paper-crisp');
+    b.classList.add('bg-surface-container-high', 'text-on-surface');
+  });
+  const activeBtn = document.getElementById('filter-' + cat);
+  if (activeBtn) {
+    activeBtn.classList.remove('bg-surface-container-high', 'text-on-surface');
+    activeBtn.classList.add('bg-ink-black', 'text-paper-crisp');
+  }
+  cards.forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-category') === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function openProjectDossier(id) {
+  const data = PROJECTS_REGISTRY[id];
+  if (!data) return;
+  document.getElementById('modal-title').innerText = data.title;
+  document.getElementById('modal-category').innerText = data.category;
+  document.getElementById('modal-tagline').innerText = data.tagline;
+  document.getElementById('modal-overview').innerText = data.overview;
+  document.getElementById('modal-problem').innerText = data.problem;
+  document.getElementById('modal-solution').innerText = data.solution;
+  document.getElementById('modal-schematic-container').innerHTML = data.schematic;
+  const bulletsContainer = document.getElementById('modal-bullets');
+  bulletsContainer.innerHTML = data.bullets.map(b => '<li class="flex items-start gap-1.5"><span class="text-primary-container font-bold">&bull;</span><span>' + b + '</span></li>').join('');
+  const tagsContainer = document.getElementById('modal-tags');
+  tagsContainer.innerHTML = data.tags.map(t => '<span class="px-1.5 py-0.5 bg-surface-container-high text-on-surface font-label-code text-[10px] uppercase">' + t + '</span>').join('');
+  const repoBtn = document.getElementById('modal-repo-link');
+  repoBtn.setAttribute('href', data.repo);
+  const modal = document.getElementById('project-modal');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+  const modal = document.getElementById('project-modal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeProjectModal();
+});
+
+document.getElementById('project-modal').addEventListener('click', (e) => {
+  if (e.target.id === 'project-modal') closeProjectModal();
+});
+
+// Initialize Technical Map on DOM load
+window.addEventListener('DOMContentLoaded', () => {
+  renderTechnicalMap();
+});
+</script>
+
+
+</body></html>
