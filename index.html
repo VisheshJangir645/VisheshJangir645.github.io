@@ -1081,28 +1081,35 @@ function resetTechTraceBanner() {
 
   function updateThreads() {
     if (!centerPin || !threadCanvas) return;
+
+    const svgRect = threadCanvas.getBoundingClientRect();
     const hubRect = centerPin.getBoundingClientRect();
-    const scrollX = window.scrollX || window.pageXOffset;
-    const scrollY = window.scrollY || window.pageYOffset;
-    const hubX = hubRect.left + hubRect.width / 2 + scrollX;
-    const hubY = hubRect.top + hubRect.height / 2 + scrollY;
+
+    const hubX = hubRect.left + hubRect.width / 2 - svgRect.left;
+    const hubY = hubRect.top + hubRect.height / 2 - svgRect.top;
 
     heroNotes.forEach(item => {
       const el = document.getElementById(item.id);
       const thread = document.getElementById(item.threadId);
+
       if (!el || !thread) return;
 
       const pin = el.querySelector('.note-pin') || el;
       const pinRect = pin.getBoundingClientRect();
-      const pinX = pinRect.left + pinRect.width / 2 + scrollX;
-      const pinY = pinRect.top + pinRect.height / 2 + scrollY;
+
+      const pinX = pinRect.left + pinRect.width / 2 - svgRect.left;
+      const pinY = pinRect.top + pinRect.height / 2 - svgRect.top;
 
       const dist = Math.hypot(pinX - hubX, pinY - hubY);
       const sag = Math.min(40, Math.max(12, dist * 0.08));
+
       const midX = (hubX + pinX) / 2;
       const midY = (hubY + pinY) / 2 + sag;
 
-      thread.setAttribute('d', `M ${hubX} ${hubY} Q ${midX} ${midY} ${pinX} ${pinY}`);
+      thread.setAttribute(
+        'd',
+        `M ${hubX} ${hubY} Q ${midX} ${midY} ${pinX} ${pinY}`
+      );
     });
   }
 
